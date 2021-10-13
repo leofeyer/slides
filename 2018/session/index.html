@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank">
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h1 data-config-title></h1>
+      <h2 data-config-subtitle></h2>
+    </hgroup>
+  </slide>
+
+  <!--  ########## AGENDA ##########  -->
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Contao 4 erweitern</p>
+      <p>Services in Hooks</p>
+      <p>Fragments</p>
+      <p>Symfony-Routen im Backend</p>
+    </article>
+  </slide>
+
+  <!--  ########## CONTAO ERWEITERN ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao 4 erweitern</h2>
+      <h3>Wie man die Managed-Edition anpasst</h3>
+    </hgroup>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Individuelle Anpassung oder frei verfügbares Bundle?</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Individuelle Anpassung</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ordnerstruktur</h2>
+    </hgroup>
+    <article>
+      <pre>
+managed-edition/
+    <b>app/</b>
+    assets/
+    files/
+    <b>src/</b>
+    system/
+    templates/
+    vendor/
+    web/</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>app/</h2>
+    </hgroup>
+    <article>
+      <pre>
+app/
+    config/
+        config.yml
+        parameters.yml
+    Resources/
+        contao/
+            config/
+            dca/
+            languages/
+            templates/</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>src/</h2>
+    </hgroup>
+    <article>
+      <pre>
+src/
+    AppBundle/
+        Controller/
+        ...</pre>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+
+namespace AppBundle\Controller;
+
+class MyController
+{
+}</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>src/</h2>
+    </hgroup>
+    <article>
+      <p>In Symfony 4 entfällt der Ordner <code>AppBundle</code> (bundle-less application):</p>
+      <pre>
+src/
+    Controller/
+    ...</pre>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+
+namespace App\Controller;
+
+class MyController
+{
+}</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Namespace Best Practice</h2>
+    </hgroup>
+    <article>
+      <table>
+        <thead>
+          <tr>
+            <th>Namespace</th>
+            <th>Ressource</th>
+            <th>Elternklasse</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>App/ContentElement</code></td>
+            <td>Inhaltselemente</td>
+            <td><code>extends Contao\ContentElement</code></td>
+          </tr>
+          <tr>
+            <td><code>App/DataContainer</code></td>
+            <td>DCA-Callbacks</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td><code>App/Model</code></td>
+            <td>Models</td>
+            <td><code>extends Contao\Model</code></td>
+          </tr>
+          <tr>
+            <td><code>App/FrontendModule</code></td>
+            <td>Frontend-Module</td>
+            <td><code>extends Contao\Module</code></td>
+          </tr>
+          <tr>
+            <td><code>App/Widget</code></td>
+            <td>Widgets</td>
+            <td><code>extends Contao\Widget</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Manager-Plugin</h2>
+    </hgroup>
+    <article>
+      <pre>
+app/
+    ContaoManagerPlugin.php</pre>
+      <p>Damit der Autoloader die Klasse findet, muss sie registriert werden:</p>
+      <pre class="prettyprint" data-lang="json">
+"autoload": {
+    "classmap": [
+        "app/ContaoManagerPlugin.php"
+    ]
+}</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Bundles registrieren</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+
+use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
+use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
+use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
+use Knp\Bundle\MenuBundle\KnpMenuBundle;
+
+class ContaoManagerPlugin implements BundlePluginInterface
+{
+    public function getBundles(ParserInterface $parser)
+    {
+        return [
+            BundleConfig::create(KnpMenuBundle::class),
+        ];
+    }
+}</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Container konfigurieren</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+
+use Contao\ManagerPlugin\Config\ConfigPluginInterface;
+use Symfony\Component\Config\Loader\LoaderInterface;
+
+class ContaoManagerPlugin implements ConfigPluginInterface
+{
+    public function registerContainerConfiguration(LoaderInterface $loader, array $config)
+    {
+        $loader->load(__DIR__.'/config/custom.yml');
+    }
+}</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Routen laden</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+
+use Contao\ManagerPlugin\Routing\RoutingPluginInterface;
+use Symfony\Component\Config\Loader\LoaderResolverInterface;
+use Symfony\Component\HttpKernel\KernelInterface;
+
+class ContaoManagerPlugin implements RoutingPluginInterface
+{
+    public function getRouteCollection(LoaderResolverInterface $resolver, KernelInterface $kernel)
+    {
+        $file = __DIR__.'/config/routing.yml';
+
+        return $resolver->resolve($file)->load($file);
+    }
+}</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Dependencies angeben</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+
+use Contao\ManagerPlugin\Dependency\DependentPluginInterface;
+
+class ContaoManagerPlugin implements DependentPluginInterface
+{
+    public function getPackageDependencies()
+    {
+        return [
+            'contao/news-bundle',
+        ];
+    }
+}</pre>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Frei verfügbares Bundle</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Zielsetzung</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Pflege des Codes in einem Git-Repository</li>
+        <li>Einbindung des Bundles in die Managed-Edition über die <code>composer.json</code></li>
+        <li>Änderungen werden im <code>vendor/</code>-Ordner der Managed-Edition gemacht und anschließend nach
+          <code>origin</code> gepusht</li>
+        <li>Löschen des <code>vendor/</code>-Ordners soll nicht das Git-Repository löschen</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>GitHub</h2>
+    </hgroup>
+    <article>
+      <p>Das Repository liegt bei GitHub (oder GitLab etc.) und ist bei Packagist registriert:</p>
+      <pre class="prettyprint" data-lang="json">
+"require": {
+    "vendor/package": "dev-master"
+},
+"config": {
+    "preferred-install": {
+        "vendor/": "source",
+        "*": "dist"
+    }
+}</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Lokal</h2>
+    </hgroup>
+    <article>
+      <p>Das Repository liegt auf dem lokalen Rechner:</p>
+      <pre class="prettyprint" data-lang="json">
+"require": {
+    "vendor/package": "dev-master"
+},
+<b>"repositories": [
+    {
+        "type": "vcs",
+        "path": "/pfad/zum/repo"
+    }
+],</b>
+"config": {
+    "preferred-install": {
+        "vendor/": "source",
+        "*": "dist"
+    }
+}</pre>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Getting started</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/skeleton-bundle-1.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/skeleton-bundle-2.png" width="1036" height="836" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/skeleton-bundle-3.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/skeleton-bundle-4.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/skeleton-bundle-5.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/skeleton-bundle-6.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/skeleton-bundle-7.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/skeleton-bundle-8.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/skeleton-bundle-9.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <!--  ########## SERVICES IN HOOKS ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Services in Hooks</h2>
+      <h3>Service-IDs anstelle von Klassen verwenden</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Bisher</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+
+$GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array(
+    'ModuleFaq',
+    'replaceInsertTags'
+);</pre>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+
+$GLOBALS['TL_DCA']['tl_faq'] = array(
+    'config' => array(
+        'onload_callback' => array(
+            array('tl_faq', 'checkPermission')
+        )
+    )
+)</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Bisher</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+
+$GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array(
+    <b>'contao_faq.listener.insert_tags',</b>
+    'onReplaceInsertTags'
+);</pre>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+
+$GLOBALS['TL_DCA']['tl_faq'] = array(
+    'config' => array(
+        'onload_callback' => array(
+            array(<b>'contao_faq.security.permission_checker', 'onCheckFaq'</b>)
+        )
+    )
+)</pre>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Hooks taggen</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Listener</h2>
+    </hgroup>
+    <article>
+      <pre>
+services:
+    contao_faq.listener.insert_tags:
+        class: Contao\FaqBundle\Listener\InsertTagsListener
+        tags:
+            - { name: <b>contao.hook</b>, hook: <b>replaceInsertTags</b> }
+</pre>
+      <ul class="build">
+        <li>Ruft die Methode <code>onReplaceInsertTags()</code> auf</li>
+        <li>Die Methode kann mittels <code>method: foo</code> explizit definiert werden</li>
+        <li>Die Priorität kann mittels <code>priority: 64</code> angegeben werden</li>
+      </ul>
+    </article>
+  </slide>
+
+  <!--  ########## FRAGMENTS ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Fragments</h2>
+      <h3>Inhaltselemente und Module als Fragments</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Bisher</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+$GLOBALS['FE_MOD']['navigationMenu']['fastnav'] = 'ModuleFastnav';</pre>
+      <pre class="prettyprint" data-lang="php">
+class ModuleNavigation extends Module
+{
+    protected $strTemplate = 'mod_fastnav';
+
+    public function generate()
+    {
+    }
+
+    protected function compile()
+    {
+    }
+}</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Neu</h2>
+    </hgroup>
+    <article>
+      <pre>
+services:
+    app.module.fastnav_controller:
+        class: App\Controller\Module\FastnavController
+        tags:
+            - { name: <b>contao.frontend_module</b>, category: <b>navigationMenu</b> }</pre>
+      <ul class="build">
+        <li>Der Key für <code>tl_module.type</code>, <code>$GLOBALS['TL_LANG']</code> etc. sowie der Name des
+          Templates werden aus dem Klassennamen generiert: <code>fastnav</code>, <code>MOD.fastnav</code>,
+          <code>mod_fastnav.html5</code></li>
+        <li>Der Type kann mittels <code>type: foo</code> explizit definiert werden: <code>MOD.foo</code>,
+          <code>mod_foo.html5</code></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Neu</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+
+namespace App\Controller\Module;
+
+use Contao\CoreBundle\Controller\AbstractFrontendModuleController
+use Contao\Model;
+use Contao\Template;
+use Symfony\Component\HttpFoundation\Request;
+
+class FastnavController extends AbstractFrontendModuleController
+{
+    protected function getResponse(Template $template, Model $model, Request $request)
+    {
+        return $template->getResponse();
+    }
+}</pre>
+    </article>
+  </slide>
+
+  <!--  ########## SYMFONY-ROUTEN IM BACKEND ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Symfony-Routen im Backend</h2>
+      <h3>Symfony-Routen aufrufen und die Ausgabe im Backend anzeigen</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Zielsetzung</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Erstellung einer Symfony-Route</li>
+        <li>Verwendung von Twig</li>
+        <li>Ausgabe im Contao-Backend</li>
+        <li>Hinzufügen eines eigenen Menüpunktes</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Erstellung einer Symfony-Route</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/backend-routes-1.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/backend-routes-2.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/backend-routes-3.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Verwendung von Twig</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/backend-routes-4.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Hinzufügen eines eigenen Menüpunktes</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/backend-routes-5.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/backend-routes-6.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/backend-routes-7.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Ausgabe im Contao-Backend</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/backend-routes-8.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/darcula.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Noch Fragen?</p>
+    </article>
+  </slide>
+
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/contao.svg" alt></aside>
+    <article class="flexbox vleft auto-fadein">
+      <p>Vielen Dank für die Aufmerksamkeit</p>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+  var slides = document.getElementsByTagName('slide');
+
+  window.addEventListener('slideenter', function(e) {
+    var idx = parseInt(e.slideNumber) - 1,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.played.length) video.currentTime = 0;
+    video.play();
+  });
+
+  window.addEventListener('slideleave', function(e) {
+    var idx = parseInt(e.slideNumber) - 1,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    video.pause();
+  });
+
+  window.addEventListener('keypress', function(e) {
+    if (e.keyCode != 46) return;
+    var idx = parseInt(document.location.hash.substr(1)) - 1 || 0,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.ended) video.currentTime = 0;
+    video.paused ? video.play() : video.pause();
+  });
+</script>
+
+</body>
+</html>

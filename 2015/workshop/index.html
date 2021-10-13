@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank">
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h1 data-config-title></h1>
+      <h2 data-config-subtitle></h2>
+      <p data-config-presenter></p>
+    </hgroup>
+  </slide>
+
+  <!--  ########## INSTALLATION ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Installation</h2>
+      <h3>Wie man Contao 4 installiert</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Composer</h2>
+    </hgroup>
+    <article>
+      <p>Aktuell kann Contao 4 nur über Composer installiert werden.</p>
+      <h3>Manuell</h3>
+      <pre class="prettyprint" data-lang="bash">
+git clone -b develop https://github.com/contao/standard-edition.git
+cd standard-edition
+curl -sS https://getcomposer.org/installer | php
+php composer.phar install
+</pre>
+      <h3>Mit create-project</h3>
+      <pre class="prettyprint" data-lang="bash">
+curl -sS https://getcomposer.org/installer | php
+php composer.phar create-project contao/standard-edition contao4 4.0.0
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Übersetzungen</h2>
+    </hgroup>
+    <article>
+      <p>Übersetzungen lassen sich mit Hilfe des <a href="http://docs.transifex.com/client/">Transifex-Clients</a>
+        installieren.</p>
+      <h3>Deutsch</h3>
+      <pre class="prettyprint" data-lang="bash">
+for i in $(ls -d vendor/contao/*-bundle); do \
+  cd $i; \
+  tx pull <b>-l de</b>; \
+  cd -; \
+done;
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Webserver</h2>
+    </hgroup>
+    <article>
+      <p>Damit Symfony im Browser aufgerufen werden kann, muss der Webserver entsprechend angepasst werden.</p>
+      <h3>Voraussetzungen</h3>
+      <ul>
+        <li>Setzen des Document-Roots auf den Ordner <code>/web</code></li>
+        <li>Mappen aller Requests auf die Datei <code>app.php</code></li>
+      </ul>
+      <p>Der Ordner <code>/web</code> enthält bereits eine <code>.htaccess</code>-Datei mit den Standard-Einstellungen*.
+        Weitere Informationen für alle gängigen Webserver gibt es auf
+        <a href="http://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html">symfony.com</a>.</p>
+      <p class="footnote gray3">* Erst nach dem Release der RC hinzugekommen.</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/symfony-webserver.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Entry-Points</h2>
+    </hgroup>
+    <article>
+      <p>In Contao 3 gibt es für jede Route einen Entry-Point, also eine PHP-Datei wie z.B.
+        <code>contao/main.php</code>. In Symfony gibt es jedoch nur einen Entry-Point (<code>web/app.php</code>) und
+        die Routen müssen konfiguriert werden.</p>
+      <h3>Auswirkung</h3>
+      <ul>
+        <li>Eigene Entry-Points (z.B. in Isotope) funktionieren in Contao 4</li>
+        <li>Die Verwendung eigener Entry-Points ist jedoch veraltet und wird in Contao 5.0 nicht mehr unterstützt</li>
+      </ul>
+      <p>Informationen zum Symfony-Routing gibt es auf <a href="http://symfony.com/doc/current/book/routing.html">symfony.com</a>.</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/symfony-routing.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>app_dev.php</h2>
+    </hgroup>
+    <article>
+      <p>Die Datei <code>web/app_dev.php</code> ist ein zweiter Entry-Point, der automatisch den Debug-Mode
+        aktiviert.</p>
+      <h3>Einschränkungen</h3>
+      <ul>
+        <li>Standardmäßig nur auf localhost nutzbar</li>
+        <li>Für die Nutzung auf dem Live-Server muss ein Benutzername und ein Passwort vergeben werden (siehe
+          <a href="https://github.com/contao/standard-edition/blob/develop/web/app_dev.php#L14-L20">Quellcode</a>).</li>
+      </ul>
+      <p>Im Debug-Mode lädt Symfony den Web-Profiler, der detaillierte Informationen über die Applikation liefert.</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-1.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-2.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-3.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-4.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-5.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-6.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-7.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-8.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-9.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-10.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-11.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-12.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-13.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-14.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-15.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-16.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-17.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>dump()</h2>
+    </hgroup>
+    <article>
+      <p>Die Funktion <code>dump()</code> wird in Contao 4 auf das Debug-Bundle gemappt und integriert ihre Ausgabe
+        direkt in den Web-Profiler.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Kein Debug-Markup irgendwo auf der Seite</li>
+        <li>Verschachtelte Informationen können ein- und ausgeklappt werden</li>
+      </ul>
+      <p class="hint">Die Funktion ist nur vorhanden, wenn sich der Kernel im Debug-Modus befindet (standardmäßig beim
+        Aufruf der Applikation über <code>app_dev.php</code>).</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/debug-bundle.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <!--  ########## BUNDLES ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Bundles</h2>
+      <h3>In Symfony ist alles ein Bundle</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Bundles</h2>
+    </hgroup>
+    <article>
+      <p>Bundles sind <a href="http://de.wikipedia.org/wiki/First-Class-Objekt">First-Class-Objekte</a> in Symfony, die
+        den benötigten <a href="http://de.wikipedia.org/wiki/Glue_Code">Glue-Code</a> enthalten, um Ressourcen in die
+        Applikation zu integrieren.</p>
+      <h3>Bundles können</h3>
+      <ul>
+        <li>Controller bereitstellen</li>
+        <li>Commands bereitstellen</li>
+        <li>Entities/Documents bereitstellen</li>
+        <li>Services bereitstellen</li>
+        <li>Assets bereitstellen (Bilder, Stylesheets, Skripte)</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Bundles</h2>
+    </hgroup>
+    <article>
+      <p>Auch Contao 4 besteht jetzt aus Symfony-Bundles, die im Ordner <code>/vendor/contao</code> liegen.</p>
+      <h3>Contao-Bundles</h3>
+      <ul>
+        <li>Hauptbundle ist <code>contao/core-bundle</code></li>
+        <li>Zur Standard-Distribution gehören außerdem <code>calendar-bundle</code>, <code>comments-bundle</code>,
+          <code>faq-bundle</code>, <code>listing-bundle</code>, <code>news-bundle</code> und
+          <code>newsletter-bundle</code></li>
+      </ul>
+      <p>Weitere Informationen: <a href="http://symfony.com/doc/current/book/page_creation.html#page-creation-bundles">Bundles erstellen</a>
+        und <a href="http://symfony.com/doc/current/cookbook/bundles/best_practices.html">Bundles Best-Practice</a></p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/symfony-bundles.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/symfony-bundles2.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Extensions werden Bundles</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ordnerstruktur</h2>
+    </hgroup>
+    <article>
+      <p>Wir empfehlen euch folgende Ordnerstruktur:</p>
+      <pre>
+src/
+  .../                 <-- neue PHP-Klassen nach PSR-4
+  Resources/
+      config/
+      contao/          <-- der bisherige Contao-Code
+      public/          <-- öffentliche Ressourcen
+  DemoBundle.php
+tests/
+  .../                 <-- die Unit-Tests für die neuen Klassen
+  bootstrap.php
+CHANGELOG.md
+composer.json
+phpunit.xml.dist
+README.md
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Calendar-Bundle</h2>
+    </hgroup>
+    <article>
+      <figure class="left">
+        <img src="images/calendar-bundle.png" width="500" height="768" alt="">
+      </figure>
+      <pre style="background:none;padding-top:50px;line-height:1.2">
+      <-- Transifex-Konfiguration
+
+
+      <-- Bisherige Contao-Dateien
+</pre>
+      <pre style="background:none;padding-top:125px;line-height:1.2">
+      <-- Öffentliche Ressourcen
+
+      <-- Bundle-Klasse
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Bundle-Klasse</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+namespace Contao\CalendarBundle;
+
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+/**
+ * Configures the Contao calendar bundle.
+ *
+ * @author Leo Feyer &lt;https://github.com/leofeyer&gt;
+ */
+class ContaoCalendarBundle extends Bundle
+{
+}
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Bundle-Aktivierung</h2>
+    </hgroup>
+    <article>
+      <p>Bundles müssen im App-Kernel registriert werden:</p>
+      <pre class="prettyprint" data-lang="php">
+// app/AppKernel.php
+public function registerBundles()
+{
+    // Reihenfolge beachten, falls Ressourcen überschrieben werden sollen
+    $bundles = [
+        new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
+        new Contao\CoreBundle\ContaoCoreBundle(),
+        <b>new Contao\CalendarBundle\ContaoCalendarBundle(),</b>
+    ];
+
+    // ...
+
+    return $bundles;
+}
+</pre>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Extensions installieren</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Installation</h2>
+    </hgroup>
+    <article>
+      <p>Alte Erweiterungen, die noch keine Bundles sind und noch in <code>/system/modules</code> liegen, können
+        ebenfalls installiert werden.</p>
+      <h3>Schritte</h3>
+      <ul>
+        <li>Dateien nach <code>/system/modules</code> kopieren*</li>
+        <li>Symlinks anlegen**: <code>app/console contao:symlinks</code></li>
+        <li>Registrierung im App-Kernel</li>
+      </ul>
+      <p class="footnote gray3">* Die Installation mittels Composer ist in Arbeit.<br>** Nur notwendig, wenn die
+        Erweiterung einen öffentlichen Unterordner beinhaltet.</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Registrierung</h2>
+    </hgroup>
+    <article>
+      <p>Um alte Erweiterungen im App-Kernel zu registrieren, steht die Klasse <code>ContaoModuleBundle</code>
+        zur Verfügung:</p>
+      <pre class="prettyprint" data-lang="php">
+// app/AppKernel.php
+use Contao\CoreBundle\HttpKernel\Bundle\ContaoModuleBundle;
+
+public function registerBundles()
+{
+    $bundles = [
+        new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
+        new Contao\CoreBundle\ContaoCoreBundle(),
+        <b>new ContaoModuleBundle('repository', $this->getRootDir()),</b>
+    ];
+
+    // ...
+
+    return $bundles;
+}
+</pre>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Refactoring</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ziel</h2>
+    </hgroup>
+    <article>
+      <p>Der bisherige Contao-Code sollte nach und nach refactored werden, bis der Ordner
+        <code>src/Resources/contao</code> irgendwann leer ist.</p>
+      <h3>Allerdings</h3>
+      <ul>
+        <li>Es handelt sich hierbei um ein langfristiges Ziel</li>
+        <li>Der Core muss erstmal selbst refactored werden, damit er die bisherigen Ressourcen nicht mehr benötigt</li>
+        <li>Refactoring ist aktuell also erstmal nur für PHP-Klassen möglich</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/symfony2-plugin.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Best-Practices</h2>
+    </hgroup>
+    <article>
+      <p>Fabien Potencier, der Erschaffer von Symfony, hat die <a href="http://symfony.com/doc/current/best_practices/index.html">Symfony Best-Practices</a>
+        für das Arbeiten mit dem Framework veröffentlicht.</p>
+      <h3>Contao-Bundles</h3>
+      <ul>
+        <li>Wir folgen in Contao den Empfehlungen</li>
+        <li>Lediglich die Test-Klassen liegen in <code>/tests</code> anstatt in <code>/src/Tests</code></li>
+      </ul>
+      <p class="hint">Die Best-Practices gelten für die Entwicklung einer App mit Symfony. Die Entwicklung eines
+        Vendor-Bundles weicht an manchen Stellen ab (z.B. liegen die Bundle-Ressourcen in
+        <code>/vendor/**/src/Resources</code> anstatt in <code>/app/Resources</code>).</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/symfony-best-practices-1.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/symfony-best-practices-2.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Controller</h2>
+    </hgroup>
+    <article>
+      <p>Wir empfehlen den "fat models, thin controllers"-Ansatz.</p>
+      <h3>Bedeutung</h3>
+      <ul>
+        <li>Der Controller wird so klein wie möglich gehalten
+          <ul>
+            <li>Möglichst keine Business-Logik</li>
+            <li>Führt Model und View zusammen und gibt die Response zurück</li>
+          </ul>
+        </li>
+        <li>Das Model manipuliert und persistiert die Daten</li>
+        <li>Die Business-Logik wird in separaten, wiederverwendbaren Klassen gekapselt, die über den
+          Dependency-Injection-Container als Services angefordert werden können</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Qualitätskontrolle</h2>
+    </hgroup>
+    <article>
+      <p>Es gibt unzählige Tools zur Qualitätskontolle in PHP.</p>
+      <h3>Kleine Auswahl</h3>
+      <ul>
+        <li><a href="https://phpunit.de">PHPUnit</a> (Unit-Test-Framework)</li>
+        <li><a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP Code-Sniffer</a> (prüft den Coding-Style)</li>
+        <li><a href="http://phpmd.org">PHP Mess-Detector</a> (findet potentielle Bugs etc.)</li>
+        <li><a href="https://github.com/sebastianbergmann/phpcpd">PHP Copy/Paste-Detector</a> (findet doppelten Code)</li>
+        <li><a href="http://www.phpmetrics.org">PhpMetrics</a> (analysiert die Komplexität)</li>
+        <li>IDE-Tools (z.B. PhpStorm Code-Inspector)</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Die gute Nachricht</h2>
+    </hgroup>
+    <article>
+      <p>Es gibt Webservices, die diese Tools bereitstellen und euren Code automatisch prüfen (kontinuierliche
+        Integration). Die meisten sind kostenlos für Open-Source-Projekte.</p>
+      <h3>Wir nutzen</h3>
+      <ul>
+        <li><a href="https://travis-ci.org">Travis CI</a> (führt die Unit-Tests nach jedem Commit aus)</li>
+        <li><a href="https://scrutinizer-ci.com">Scrutinizer</a> (analysiert die Code-Qualität und Test-Coverage)</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/travis-1.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/travis-2.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/scrutinizer-1.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/scrutinizer-2.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/scrutinizer-3.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/scrutinizer-4.png" width="1024" height="768" alt="">
+  </slide>
+
+  <!--  ########## ÄNDERUNGEN ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Verschiedenes</h2>
+      <h3>Was Entwickler sonst noch über Contao 4 wissen sollten</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Template::output()</h2>
+    </hgroup>
+    <article>
+      <p>Das Symfony Request-Respone-Konzept sieht es vor, dass jeder Controller entweder ein Response-Objekt
+        zurückgibt oder eine Exception wirft.</p>
+      <p>In Contao wurde die Antwort an den Client jedoch bisher durch die Methode <code>Template::output()</code>
+        erzeugt, welche in Contao 4 nun veraltet ist und in einer zukünftigen Version entfernt wird.</p>
+      <h3>Alternativen</h3>
+      <ul>
+        <li><code>Template::getResponse()</code></li>
+        <li><code>throw new ResponseException(new Response($str))</code></li>
+        <li><code>/contao/core-bundle/src/Exception/*.php</code></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Informationen</h2>
+    </hgroup>
+    <article>
+      <p>Das Contao Core-Bundle enthält mehrere Markdown-Dateien mit Informationen für Entwickler:</p>
+      <h3>Dateien</h3>
+      <ul>
+        <li><code>UPGRADE.md</code>: nicht rückwärtskompatible Änderungen</li>
+        <li><code>DEPRECATED.md</code>: veraltete Ressourcen, die demnächst entfernt werden</li>
+        <li>Die Verwendung veralteter Ressourcen ist im Web-Profiler ersichtlich</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-5.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/web-profiler-14.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Dokumentation</h2>
+    </hgroup>
+    <article>
+      <p>Weitere Entwickler-Informationen gibt es auf <a href="https://docs.contao.org">docs.contao.org</a>.</p>
+      <h3>Bücher</h3>
+      <ul>
+        <li><a href="https://docs.contao.org/books/contao4-migration/">Build extensions for Contao 4</a></li>
+        <li><a href="https://docs.contao.org/books/cookbook/">Cookbook</a></li>
+        <li><a href="https://docs.contao.org/books/manual/3.5/">Contao-Handbuch (ab Kapitel 6)</a></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Semantische Versionierung</h2>
+    </hgroup>
+    <article>
+      <p>Beginnend mit Contao 4 verwenden wir <a href="http://semver.org">semantische Versionierung</a>.</p>
+      <figure class="center">
+        <img src="images/version-syntax.jpg" width="640" height="150" alt="" style="margin:10px 0 -20px">
+      </figure>
+      <h3>Regeln</h3>
+      <ul>
+        <li>Bugfix-Releases dürfen nur rückwärtskompatible Fixes enthalten</li>
+        <li>Minor-Releases können rückwärtskompatible neue Features enthalten</li>
+        <li>Jede inkompatible API-Änderung muss als neue Major-Version veröffentlicht werden</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>API-Änderungen</h2>
+    </hgroup>
+    <article>
+      <p>Nicht jeder rückwärtsinkompatible Änderung ist auch eine API-Änderung!</p>
+      <h3>API</h3>
+      <ul>
+        <li>Als "public" oder "protected" deklarierte Methoden in PHP-Klassen</li>
+        <li>Ausgenommen Methoden, die als <code>@internal</code> gekennzeichnet sind</li>
+      </ul>
+      <p>Templates sind explizit nicht Teil der API und können sich daher auch in Minor- oder Bugfix-Versionen
+        ändern, selbst wenn dadurch Stylesheet-Anpassungen notwendig werden.</p>
+    </article>
+  </slide>
+
+  <!--  ########## SCHLUSSWORT ##########  -->
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Noch Fragen?</p>
+    </article>
+  </slide>
+
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <p>Vielen Dank für die Aufmerksamkeit</p>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+  var slides = document.getElementsByTagName('slide');
+
+  window.addEventListener('slideenter', function(e) {
+    var idx = parseInt(e.slideNumber) - 1,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.played.length) video.currentTime = 0;
+    video.play();
+  });
+
+  window.addEventListener('keypress', function(e) {
+    if (e.keyCode != 112) return;
+    var idx = parseInt(document.location.hash.substr(1)) - 1 || 0,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.ended) video.currentTime = 0;
+    video.paused ? video.play() : video.pause();
+  });
+</script>
+
+</body>
+</html>

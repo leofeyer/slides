@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank">
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h1 data-config-title></h1>
+      <h2 data-config-subtitle></h2>
+      <p data-config-presenter></p>
+    </hgroup>
+  </slide>
+
+  <!--  ########## AGENDA ##########  -->
+
+  <slide>
+    <hgroup>
+      <h2>Agenda</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Ergebnisse der Umfrage zu Contao 4</li>
+        <li>Installation von Contao 4 und Umstieg von Contao 3</li>
+        <li>Statusbericht zum Contao Manager</li>
+        <li>Ausblick auf Contao 4.4 LTS</li>
+      </ul>
+    </article>
+  </slide>
+
+  <!--  ########## UMFRAGE ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Umfrage</h2>
+      <h3>Ergebnisse der Umfrage zu Contao 4</h3>
+    </hgroup>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/umfrage.png" width="1024" height="768" alt>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ergebnis</h2>
+    </hgroup>
+    <article>
+      <figure class="center">
+        <img src="images/umfrage-1.png" width="800" height="460" alt>
+      </figure>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ergebnis</h2>
+    </hgroup>
+    <article>
+      <figure class="center">
+        <img src="images/umfrage-2.png" width="800" height="364" alt>
+      </figure>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ergebnis</h2>
+    </hgroup>
+    <article>
+      <figure class="center">
+        <img src="images/umfrage-3.png" width="800" height="364" alt>
+      </figure>
+      <ul class="annotation" style="margin-top:1em">
+        <li>Ich komme mit der Dokumentation nicht zurecht</li>
+        <li>Ich warte auf die erste LTS-Version (Contao 4.4)</li>
+        <li>Ich warte auf die grafische Oberfläche (Contao-Manager)</li>
+        <li>Ich warte auf das Release meines bevorzugten Themes</li>
+        <li>Ich warte auf eine noch nicht kompatible Erweiterung</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Interpretation</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Das größte Problem ist die Dokumentation:
+          <ul>
+            <li>Ich weiß nicht, wie man Contao 4 installiert (8,5%)</li>
+            <li>Ich weiß nicht, wie ich meine bestehende Installation aktualisiere (13,4%)</li>
+            <li>Ich weiß nicht, wie ich die Erweiterung XYZ installiere (17,3%)</li>
+          </ul>
+        </li>
+        <li>Die Hälfte der Befragten wartet auf Contao 4.4 LTS</li>
+        <li>Zwei Drittel der Befragten warten auf den Contao-Manager</li>
+        <li>Ein Drittel der Befragten nutzt Contao 4 hauptsächlich nicht, weil sie nicht auf der Kommandozeile arbeiten wollen</li>
+        <li>Nur 5,6% der Befragten nutzen Contao 4 hauptsächlich nicht, weil ihr Hosting nicht kompatibel ist</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Schlussfolgerung</h2>
+    </hgroup>
+    <article>
+      <p>Um den Anwendern den Umstieg auf Contao 4 und die Nutzung von Contao 4 zu erleichtern, müssen wir</p>
+      <ul>
+        <li>die Dokumentation erweitern,</li>
+        <li>Fehlinformationen berichtigen und</li>
+        <li>den Contao-Manager fertigstellen.</li>
+      </ul>
+    </article>
+  </slide>
+
+  <!--  ########## CONTAO 4 ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao 4</h2>
+      <h3>Installation und Umstieg von Contao 3</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao 4</h2>
+    </hgroup>
+    <article>
+      <p>Contao 4 ist ein Symfony-Bundle, das zu jeder Symfony-Applikation hinzugefügt werden kann.</p>
+      <p>Wer noch keine Symfony-Applikation hat, kann eine unserer vorgefertigten Applikationen nutzen: die
+        <b>Managed Edition</b> oder die <b>Standard Edition</b>.</p>
+      <p>Im Gegensatz zur Standard Edition, die vom Anwender manuell konfiguriert werden muss, konfiguriert und
+        verwaltet sich die Managed Edition selbständig.</p>
+      <p>Wer Contao über contao.org oder über download.contao.org installiert, erhält automatisch die Managed Edition.</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Komponenten</h2>
+    </hgroup>
+    <article>
+      <table>
+        <thead>
+          <tr>
+            <th>Komponente</th>
+            <th>Erklärung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="top-nowrap">manager-plugin</td>
+            <td><p>Das Manager-Plugin stellt Methoden und Interfaces bereit, die ein Bundle implemen&shy;tieren muss,
+              damit es automatisch geladen und konfiguriert werden kann.</p>
+              Siehe z.B. <code><a href="https://github.com/contao/core-bundle/blob/master/src/ContaoManager/Plugin.php" target="_blank">Contao\CoreBundle\ContaoManager\Plugin</a></code></td>
+          </tr>
+          <tr>
+            <td class="top-nowrap">manager-bundle</td>
+            <td><p>Das Manager-Bundle übernimmt die <b>Installation</b> und <b>Konfiguration</b> der Applikation und
+              stellt einen Kernel bereit, der die vorhandenen Symfony-Bundles und Contao-Extensions automatisch lädt.</p>
+              Siehe <code><a href="https://github.com/contao/manager-bundle/blob/develop/src/HttpKernel/ContaoKernel.php" target="_blank">Contao\ManagerBundle\HttpKernel\ContaoKernel</a></code></td>
+            </td>
+          </tr>
+          <tr>
+            <td class="top-nowrap">Managed Edition</td>
+            <td><p>Als "Managed Edition" bezeichnen wir eine angepasste Symfony-Applikation mit Contao, die durch das
+              Manager-Bundle verwaltet wird.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Ziel: Contao 4 installieren und Isotope hinzufügen</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Ziel: Eine Contao 3.5-Erweiterung manuell installieren</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Ziel: Von Contao 3.5 auf Contao 4 umsteigen</p>
+    </article>
+  </slide>
+
+  <!--  ########## CONTAO MANAGER ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao Manager</h2>
+      <h3>Verwaltung der Contao-Installation im Browser</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao Manager</h2>
+    </hgroup>
+    <article>
+      <p>Der Contao Manager ist eine <b>grafische Benutzeroberfläche</b>, um Kommandozeilen-Befehle im Zusammenhang
+        mit der Contao-Installation im Browser auszuführen.</p>
+      <h3>Aufgaben</h3>
+      <ul>
+        <li>Verwaltung von Bundles und Extensions</li>
+        <li>Wartung der Installation, z.B. Leeren des Cache</li>
+        <li>Anpassung der Konfiguration (geplant)</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Ziel: Contao 4 installieren und Isotope hinzufügen</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Entwickler</h2>
+    </hgroup>
+    <article>
+      <div class="gallery with-p">
+        <figure>
+          <img src="people/andreas-schempp.jpg" width="150" height="150" alt>
+          <figcaption>Andreas Schempp</figcaption>
+          <p>Project Lead</p>
+        </figure>
+        <figure>
+          <img src="people/christian-schiffler.jpg" width="150" height="150" alt>
+          <figcaption>Christian Schiffler</figcaption>
+          <p>API, Backend</p>
+        </figure>
+        <figure>
+          <img src="people/yanick-witschi.jpg" width="150" height="150" alt>
+          <figcaption>Yanick Witschi</figcaption>
+          <p>Frontend, Cloud</p>
+        </figure>
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Release</h2>
+    </hgroup>
+    <article>
+      <p>Das Entwickler-Team möchte die Version 1.0.0 des Contao Manager zur Konferenz im Juni 2017 veröffentlichen.
+        Vorab soll es noch eine zweiteilige Beta-Phase geben.</p>
+      <h3>Phasen</h3>
+      <ul>
+        <li>Private Alpha (ausgewählte Entwickler)</li>
+        <li>Private Beta (ausgewählte Partner und Association-Mitglieder)</li>
+        <li>Public Beta</li>
+        <li>Finales Release</li>
+      </ul>
+    </article>
+  </slide>
+
+  <!--  ########## CONTAO 4.4 ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao 4.4 LTS</h2>
+      <h3>Ausblick auf die nächste LTS-Version</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>CSV-Import</h2>
+    </hgroup>
+    <article>
+      <p>Die Optionen eines Auswahlfeldes im Formulargenerator können nun auch aus einer CSV-Datei importiert werden.</p>
+      <figure class="center" style="margin-top:2em">
+        <img src="images/csv-import-1.png" width="900" height="400" alt>
+      </figure>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>CSV-Import</h2>
+    </hgroup>
+    <article>
+      <figure class="center" style="margin-top:2em">
+        <img src="images/csv-import-2.png" width="900" height="450" alt>
+      </figure>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Backend-Routen</h2>
+    </hgroup>
+    <article>
+      <p>In Contao 4.4 ist es möglich, eigene Routen zu registrieren und die Ausgabe im Contao-Backend anzuzeigen.</p>
+      <p>Entwickler können so Symfony-Controller verwenden (inkl. Twig) und ihre eigene Logik in das vorhandene System
+        integrieren.</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Element-Preview</h2>
+    </hgroup>
+    <article>
+      <p>Die Höhe der Elemente im Parent-View soll optimiert werden.</p>
+      <figure class="center" style="margin-top:2em">
+        <img src="images/element-preview.png" width="900" height="335" alt>
+      </figure>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Bild einfügen</h2>
+    </hgroup>
+    <article>
+      <p>Die Felder für das Hinzufügen eines Bildes sollen reduziert werden.</p>
+      <figure class="center" style="margin-top:2em">
+        <img src="images/bild-einfuegen-1.png" width="900" height="386" alt>
+      </figure>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Bild einfügen</h2>
+    </hgroup>
+    <article>
+      <figure class="center" style="margin-top:2em">
+        <img src="images/bild-einfuegen-2.png" width="900" height="450" alt>
+      </figure>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Link-Picker</h2>
+    </hgroup>
+    <article>
+      <p>Es ist geplant, einen Link-Picker für News und Events hinzuzufügen.</p>
+      <h3>Momentan</h3>
+      <ul>
+        <li>Dateien mittels <code>{{file::*}}</code></li>
+        <li>Seiten mittels <code>{{link_url::*}}</code></li>
+      </ul>
+      <h3>Dann zusätzlich</h3>
+      <ul>
+        <li>News mittels <code>{{news_url::*}}</code></li>
+        <li>Events mittels <code>{{calendar_url::*}}</code></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Edit-Hinweis</h2>
+    </hgroup>
+    <article>
+      <p>Wenn ein Nutzer ein Element speichert, das während des Bearbeitens von von einem anderen Nutzer ebenfalls
+        gespeichert wurde, soll der Benutzer einen entsprechenden Hinweis erhalten.</p>
+      <p>Der Benutzer kann dann anhand der Diff-Ansicht entscheiden, welche Version aktiviert werden soll.</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/release-plan.png" width="1024" height="768" alt>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Noch Fragen?</p>
+    </article>
+  </slide>
+
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/contao.svg" alt></aside>
+    <article class="flexbox vleft auto-fadein">
+      <p>Vielen Dank für die Aufmerksamkeit</p>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+  var slides = document.getElementsByTagName('slide');
+
+  window.addEventListener('slideenter', function(e) {
+    var idx = parseInt(e.slideNumber) - 1,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.played.length) video.currentTime = 0;
+    video.play();
+  });
+
+  window.addEventListener('keypress', function(e) {
+    if (e.keyCode != 112) return;
+    var idx = parseInt(document.location.hash.substr(1)) - 1 || 0,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.ended) video.currentTime = 0;
+    video.paused ? video.play() : video.pause();
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank">
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h1 data-config-title></h1>
+      <h2 data-config-subtitle></h2>
+    </hgroup>
+  </slide>
+
+  <!--  ########## AGENDA ##########  -->
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Contao in Zahlen</p>
+      <p>Contao 3</p>
+      <p>Contao 4.9 LTS</p>
+      <p>Umstieg von 4.4 auf 4.9</p>
+      <p>Partner-Schwerpunkte</p>
+    </article>
+  </slide>
+
+  <!--  ########## ZAHLEN ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao in Zahlen</h2>
+      <h3>Aktuelle Kennziffern rund um Contao</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Downloads</h2>
+    </hgroup>
+    <article>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:20%">Stichtag</th>
+            <th style="width:20%">Downloads</th>
+            <th style="width:20%">Veränderung</th>
+            <th style="width:20%">Zeitraum</th>
+            <th style="width:20%">Downloads pro Tag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>08.03.2019</td>
+            <td>1.535.717<sup>2)</sup></td>
+            <td>+ 92.122</td>
+            <td>280 Tage</td>
+            <td>329</td>
+          </tr>
+          <tr>
+            <td>01.06.2018</td>
+            <td>1.443.595</td>
+            <td>+ 138.360</td>
+            <td>359 Tage</td>
+            <td>385</td>
+          </tr>
+          <tr>
+            <td>07.06.2017</td>
+            <td>1.305.235<sup>1)</sup></td>
+            <td>+ 114.906</td>
+            <td>394 Tage</td>
+            <td>351</td>
+          </tr>
+          <tr>
+            <td>10.05.2016</td>
+            <td>1.144.765</td>
+            <td>+ 106.716</td>
+            <td>359 Tage</td>
+            <td>297</td>
+          </tr>
+          <tr>
+            <td>18.05.2015</td>
+            <td>1.038.049</td>
+            <td>+ 94.260</td>
+            <td>302 Tage</td>
+            <td>312</td>
+          </tr>
+          <tr>
+            <td>21.07.2014</td>
+            <td>943.789</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="footnote">1) Enthält erstmals auch die Git-Installs (29.795 <code>contao/core</code> und
+        15.769 <code>contao/core-bundle</code>).<br>2) Seit der Umstellung auf das Monorepo <code>contao/contao</code>
+        werden die Dev-Installs nicht mehr mitgezählt.</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Marktanteil</h2>
+    </hgroup>
+    <article>
+      <p>Contao liegt bei <a href="http://www.cmscrawler.com/">CMSCrawler</a> auf Platz 11 von 840 Systemen.</p>
+      <h3>Marktanteile</h3>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:28%">Land</th>
+            <th colspan="3">Marktanteil</th>
+            <th colspan="3">TOP 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="http://www.cmscrawler.com/tld/de">Deutschland</a></td>
+            <td style="width:12%">4,55%</td>
+            <td style="width:12%"><span class="red">-0,63%</span><sup>*</sup></td>
+            <td style="width:12%">Platz 4</td>
+            <td style="width:12%">Wordpress<br>TYPO3<br>Joomla!</td>
+            <td style="width:12%">42,70%<br>14,61%<br>11,34%</td>
+            <td style="width:12%"><span class="green">+0,61%</span><br><span class="red">-1,10%</span><br><span class="red">-0,75%</span></td>
+          </tr>
+          <tr>
+            <td><a href="http://www.cmscrawler.com/tld/ch">Schweiz</a></td>
+            <td>3,27%</td>
+            <td><span class="red">-0,29%</span><sup>*</sup></td>
+            <td>Platz 5</td>
+            <td>Wordpress<br>Joomla!<br>TYPO3</td>
+            <td>41,29%<br>13,61%<br>11,69%</td>
+            <td><span class="green">+2,79%</span><br><span class="red">-0,01%</span><br><span class="red">-1,47%</span></td>
+          </tr>
+          <tr>
+            <td><a href="http://www.cmscrawler.com/tld/at">Österreich</a></td>
+            <td>4,22%</td>
+            <td><span class="red">-0,62%</span><sup>*</sup></td>
+            <td>Platz 4</td>
+            <td>Wordpress<br>TYPO3<br>Joomla!</td>
+            <td>43,46%<br>17,01%<br>12,67%</td>
+            <td><span class="green">+4,09%</span><br><span class="red">-1,96%</span><br><span class="red">-0,16%</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="footnote">*) Die Veränderungen beziehen sich auf die Zahlen der letzten Konferenz im Juni 2018.</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Partner</h2>
+    </hgroup>
+    <article>
+      <p>Aktuell haben wir 311 Contao-Partner, davon sind 87 Premium-Partner.</p>
+      <h3>TOP 5</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Land</th>
+            <th>Partner insgesamt</th>
+            <th>davon Premium-Partner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="width:50%">Deutschland</td>
+            <td style="width:25%">245</td>
+            <td style="width:25%">67</td>
+          </tr>
+          <tr>
+            <td>Schweiz</td>
+            <td>31</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>Österreich</td>
+            <td>22</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>Frankreich</td>
+            <td>3</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>USA</td>
+            <td>3</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </slide>
+
+  <!--  ########## CONTAO 3 ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao 3</h2>
+      <h3>Wo wir stehen und wie es weiter geht</h3>
+    </hgroup>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/release-plan.png" width="1280" height="629" alt>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>End-of-Life</h2>
+    </hgroup>
+    <article>
+      <p>Was passiert nach dem End-of-Life Ende Mai 2019?</p>
+      <ul class="build">
+        <li>Der Code wird nicht mehr weiter gepflegt.</li>
+        <li>Bug-Reports, die ausschließlich Contao 3.5 betreffen, werden geschlossen.</li>
+        <li>Feature-Requests bleiben offen und müssen nicht neu erstellt werden.</li>
+        <li>Das Extension Repository bleibt mindestens bis Mai 2022 online, jedoch kann man nur noch Freigaben für
+          bestehende Extensions und keine neuen Extensions mehr anlegen.</li>
+        <li>Das Live-Update bleibt ebenfalls bis auf Weiteres verfügbar.</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Rest in peace PHP 5</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/supported-php-versions.png" width="1280" height="700" alt>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao und PHP 7</h2>
+    </hgroup>
+    <article>
+      <p>Contao ist seit Version 3.5.5 mit PHP 7 kompatibel.</p>
+      <ul class="build">
+        <li>Viele Erweiterungen sind ebenfalls mit PHP 7.1+ kompatibel</li>
+        <li>Nach Möglichkeit sollte eine aktive PHP-Version (aktuell PHP 7.2 und 7.3) verwendet werden</li>
+        <li>Aber Achtung: Die PHP mcrypt-Extension ist in PHP 7.2 entfallen!</li>
+      </ul>
+    </article>
+  </slide>
+
+  <!--  ########## CONTAO 4.9 LTS ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao 4.9 LTS</h2>
+      <h3>Neue Features seit der aktuellen LTS-Version</h3>
+    </hgroup>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/alias-formats.png" width="1100" height="420" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Zugriff auf die Contao-Labels im Symfony Translator</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Verwendung des KNP Menu-Bundles für die Backend-Navigation (4.5)</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Hooks (4.5) und Callbacks (4.7) können als Event-Listener getaggt werden</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Verwaltung der Assets mit der Symfony Assets-Komponente (4.5)</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/external-javascripts.png" width="1280" height="744" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Landmarks und ARIA-Roles im Backend (4.5)</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Verwendung der Symfony Security-Komponente für die Authentifizierung (4.5)</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/two-factor-authentication.png" width="1280" height="756" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Drag und Drop im Dateimanager (4.6)</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/player-options.png" width="1280" height="552" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Module und Inhaltselemente als Fragments (4.6)</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Löschung unbestätigter Registrierungen gem. DSGVO (4.6)</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/double-opt-in.png" width="1280" height="354" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/seo-news-and-events.png" width="1280" height="452" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Verwendung des Symfony CMF-Routers im Frontend (4.7)</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Nutzung von Security-Votern für Backend-Benutzer (4.7)</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Deferred Image Resizing (4.8)</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Entfall des Header-Replay-Bundles (4.8)</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/debug-mode.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Ordner <code>contao/</code> für projektspezifische Anpassungen (4.8)</p>
+    </article>
+  </slide>
+
+  <!--  ########## UMSTIEG VON 4.4 AUF 4.9 ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Umstieg von 4.4 auf 4.9</h2>
+      <h3>Wechsel von der aktuellen LTS-Version zur nächsten</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Deprecated</h2>
+    </hgroup>
+    <article>
+      <p>Folgendes sollte nicht mehr benutzt werden:</p>
+      <ul class="build">
+        <li>Frontend-Modul "Flash-Film"<br>→ ersatzlos entfallen</li>
+        <li><code>$_SESSION['TL_LANGUAGE']</code><br>→ stattdessen sollte die Request-Locale verwendet werden</li>
+        <li><code>require "symfony/symfony"</code><br>→ stattdessen sollten die einzelnen Symfony-Komponenten
+          angefordert werden</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Seitentyp "Fehler 401"</h2>
+    </hgroup>
+    <article>
+      <p>Seit Contao 4.6 gibt es zusätzlich zum Seitentyp "Fehler 403" auch den Seitentyp "Fehler 401".</p>
+      <ul class="build">
+        <li>401 Unauthorized: Der Benutzer hat sich nicht authentifiziert</li>
+        <li>403 Forbidden: Der Benutzer hat sich authentifiziert, hat jedoch keine Berechtigung, um auf die angeforderte
+          Seite zuzugreifen</li>
+        <li>Seite "Fehler 401" → Bitte melde Dich an</li>
+        <li>Seite "Fehler 403" → Wende dich an den Admin</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>InnoDB + utf8mb4</h2>
+    </hgroup>
+    <article>
+      <p>Seit Contao 4.5 nutzen wir <code>InnoDB</code> als Datenbank-Engine, <code>utf8mb4</code> als
+        Datenbank-Zeichensatz und <code>utf8mb4_unicode_ci</code> als Datenbank-Kollation.</p>
+      <ul class="build">
+        <li>Bei Bedarf kann auch die bisherige Engine <code>MyISAM</code> verwendet werden, allerdings ist diese
+          mittlerweile <a href="https://www.percona.com/blog/2016/10/11/mysql-8-0-end-myisam/">veraltet</a></li>
+        <li>Bei Bedarf kann auch der bisherige Zeichensatz <code>utf8</code> konfiguriert werden, allerdings
+          unterstützt dieser nicht alle Unicode-Zeichen</li>
+        <li>Bei älteren MySQL-Versionen muss die Option <code>innodb_large_prefixes</code> aktiviert werden</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/innodb.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/utf8mb4.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/innodb-large-prefixes.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>contao/tcpdf-bundle</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/contao-tcpdf-bundle.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>contao/mobile-page-layout-bundle</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/mobile-seitenlayouts-1.png" width="1280" height="617" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/mobile-seitenlayouts-2.png" width="1280" height="687" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/contao-mobile-page-layout-bundle.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Mobiles Seitenlayout</h2>
+    </hgroup>
+    <article>
+      <p>Achtung: Das mobile Seitenlayout ist nicht kompatibel mit dem HTTP-Cache!</p>
+      <ul class="build">
+        <li>Zwei unterschiedliche Dokumente unter derselben URL, abhängig vom User-Agent</li>
+        <li>Google <a href="https://developers.google.com/search/mobile-sites/mobile-seo/dynamic-serving?hl=de">empfiehlt</a>
+          das Setzen eines <code>Vary: User-Agent</code>-Headers</li>
+        <li>Dieser würde jedoch den HTTP-Cache anweisen, eine separate Datei pro Seite und User-Agent anzulegen
+          (Sicherheitsrisiko!)</li>
+        <li>Deswegen wird der HTTP-Cache automatisch deaktiviert, wenn ein mobiles Seitenlayout vorhanden ist</li>
+      </ul>
+    </article>
+  </slide>
+
+  <!--  ########## PARTNER-SCHWERPUNKTE ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Partner-Schwerpunkte</h2>
+      <h3>Interne Partnersuche – Partner nach Schwerpunkten finden</h3>
+    </hgroup>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/focus-area-search-1.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/focus-area-search-2.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/focus-area-search-3.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Noch Fragen?</p>
+    </article>
+  </slide>
+
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/contao.svg" alt></aside>
+    <article class="flexbox vleft auto-fadein">
+      <p>Vielen Dank für die Aufmerksamkeit</p>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+  var slides = document.getElementsByTagName('slide');
+
+  window.addEventListener('slideenter', function(e) {
+    var idx = parseInt(e.slideNumber) - 1,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.played.length) video.currentTime = 0;
+    video.play();
+  });
+
+  window.addEventListener('slideleave', function(e) {
+    var idx = parseInt(e.slideNumber) - 1,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    video.pause();
+  });
+
+  window.addEventListener('keypress', function(e) {
+    if (e.keyCode != 46) return;
+    var idx = parseInt(document.location.hash.substr(1)) - 1 || 0,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.ended) video.currentTime = 0;
+    video.paused ? video.play() : video.pause();
+  });
+</script>
+
+</body>
+</html>

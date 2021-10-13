@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank">
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h1 data-config-title></h1>
+      <h2 data-config-subtitle></h2>
+    </hgroup>
+  </slide>
+
+  <!--  ########## AGENDA ##########  -->
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Contao in Zahlen</p>
+      <p>Release-Zyklus</p>
+      <p>Contao 3</p>
+      <p>DSGVO</p>
+      <p>Contao 4.6</p>
+      <p>Contao Manager</p>
+    </article>
+  </slide>
+
+  <!--  ########## ZAHLEN ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao in Zahlen</h2>
+      <h3>Aktuelle Kennziffern rund um Contao</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Downloads</h2>
+    </hgroup>
+    <article>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:20%">Stichtag</th>
+            <th style="width:20%">Downloads</th>
+            <th style="width:20%">Veränderung</th>
+            <th style="width:20%">Zeitraum</th>
+            <th style="width:20%">Downloads pro Tag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01.06.2018</td>
+            <td>1.443.595</td>
+            <td>+ 138.360</td>
+            <td>359 Tage</td>
+            <td>385</td>
+          </tr>
+          <tr>
+            <td>07.06.2017</td>
+            <td>1.305.235<sup>1)</sup></td>
+            <td>+ 114.906</td>
+            <td>394 Tage</td>
+            <td>351</td>
+          </tr>
+          <tr>
+            <td>10.05.2016</td>
+            <td>1.144.765</td>
+            <td>+ 106.716</td>
+            <td>359 Tage</td>
+            <td>297</td>
+          </tr>
+          <tr>
+            <td>18.05.2015</td>
+            <td>1.038.049</td>
+            <td>+ 94.260</td>
+            <td>302 Tage</td>
+            <td>312</td>
+          </tr>
+          <tr>
+            <td>21.07.2014</td>
+            <td>943.789</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="footnote">1) Enthält erstmals auch die Git-Installs (29.795 <code>contao/core</code> und
+        15.769 <code>contao/core-bundle</code>).</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Marktanteil</h2>
+    </hgroup>
+    <article>
+      <p>Contao liegt bei <a href="http://www.cmscrawler.com/">CMSCrawler</a> auf Platz 12 von 834 Systemen.</p>
+      <h3>Marktanteile</h3>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:28%">Land</th>
+            <th colspan="3">Marktanteil</th>
+            <th colspan="3">TOP 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="http://www.cmscrawler.com/tld/de">Deutschland</a></td>
+            <td style="width:12%">5,18%</td>
+            <td style="width:12%"><span class="green">+0,29%</span><sup>*</sup></td>
+            <td style="width:12%">Platz 4</td>
+            <td style="width:12%">Wordpress<br>TYPO3<br>Joomla!</td>
+            <td style="width:12%">42,09%<br>15,71%<br>12,09%</td>
+            <td style="width:12%">-</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.cmscrawler.com/tld/ch">Schweiz</a></td>
+            <td>3,56%</td>
+            <td><span class="red">-0,20%</span><sup>*</sup></td>
+            <td>Platz 5</td>
+            <td>Wordpress<br>Joomla!<br>TYPO3</td>
+            <td>38,50%<br>13,62%<br>13,16%</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.cmscrawler.com/tld/at">Österreich</a></td>
+            <td>4,84%</td>
+            <td><span class="red">-0,09%</span><sup>*</sup></td>
+            <td>Platz 4</td>
+            <td>Wordpress<br>TYPO3<br>Joomla!</td>
+            <td>39,37%<br>18,97%<br>12,83%</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="footnote">*) Die Veränderungen beziehen sich auf die Zahlen aus Mai 2016.</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Partner</h2>
+    </hgroup>
+    <article>
+      <p>Aktuell haben wir 392 Contao-Partner, davon sind 92 Premium-Partner.</p>
+      <h3>TOP 5</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Land</th>
+            <th>Partner insgesamt</th>
+            <th>davon Premium-Partner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="width:50%">Deutschland</td>
+            <td style="width:25%">297</td>
+            <td style="width:25%">70</td>
+          </tr>
+          <tr>
+            <td>Schweiz</td>
+            <td>37</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>Österreich</td>
+            <td>29</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Frankreich</td>
+            <td>4</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>USA</td>
+            <td>3</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Tickets</h2>
+    </hgroup>
+    <article>
+      <p>Die Rate der offenen Tickets liegt unter 10%.</p>
+      <h3>Auswertung</h3>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:24%">Repository</th>
+            <th style="width:19%">Offene Tickets</th>
+            <th style="width:19%">Davon Pull-Requests</th>
+            <th style="width:19%">Geschlossene Tickets</th>
+            <th style="width:19%">Offene Tickets in %</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://github.com/contao/core" target="_blank" rel="noopener">contao/core</a></td>
+            <td>350</td>
+            <td>10</td>
+            <td>8.534</td>
+            <td>4,10%</td>
+          </tr>
+          <tr>
+            <td><a href="https://github.com/contao/core-bundle" target="_blank" rel="noopener">contao/core-bundle</a></td>
+            <td>126</td>
+            <td>24</td>
+            <td>1.409</td>
+            <td>8,94%</td>
+          </tr>
+          <tr>
+            <td><a href="https://github.com/symfony/symfony" target="_blank" rel="noopener">symfony/symfony</a></td>
+            <td>845</td>
+            <td>166</td>
+            <td>26.563</td>
+            <td>3,18%</td>
+          </tr>
+          <tr>
+            <td><a href="https://github.com/doctrine/dbal" target="_blank" rel="noopener">doctrine/dbal</a></td>
+            <td>417</td>
+            <td>131</td>
+            <td>2.725</td>
+            <td>15,30%</td>
+          </tr>
+          <tr>
+            <td><a href="https://github.com/tinymce/tinymce" target="_blank" rel="noopener">tinymce/tinymce</a></td>
+            <td>920</td>
+            <td>7</td>
+            <td>3.498</td>
+            <td>26,03%</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </slide>
+
+  <!--  ########## Release-Zyklus ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Release-Zyklus</h2>
+      <h3>Anpassung der Release-Termine</h3>
+    </hgroup>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/release-plan-1.png" width="1280" height="645" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/release-plan-2.png" width="1280" height="645" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/release-plan-3.png" width="1280" height="645" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/release-plan-4.png" width="1280" height="645" alt>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Release-Termine</h2>
+    </hgroup>
+    <article>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:25%">Version</th>
+            <th style="width:25%">Termin</th>
+            <th style="width:25%">Support</th>
+            <th style="width:25%">Symfony</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Contao 4.6</td>
+            <td>August 2018</td>
+            <td>bis Februar 2019</td>
+            <td>3.4 | 4.0 | 4.1</td>
+          </tr>
+          <tr>
+            <td>Contao 4.7</td>
+            <td>Februar 2019</td>
+            <td>bis August 2019</td>
+            <td>*</td>
+          </tr>
+          <tr>
+            <td>Contao 4.8</td>
+            <td>August 2019</td>
+            <td>bis Februar 2020</td>
+            <td>*</td>
+          </tr>
+          <tr>
+            <td>Contao 4.9 LTS</td>
+            <td>Februar 2020</td>
+            <td>bis Februar 2024</td>
+            <td>4.4</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="footnote">*) Grundsätzlich versuchen wir, alle aktiven Symfony-Versionen zu unterstützen, es sei denn
+        ein Feature erfordert eine bestimmte Mindestversion.</p>
+    </article>
+  </slide>
+
+  <!--  ########## CONTAO 3 ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao 3</h2>
+      <h3>Wo wir stehen und wie es weiter geht</h3>
+    </hgroup>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/release-plan-5.png" width="1280" height="620" class="image-100" alt>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>End-of-Life</h2>
+    </hgroup>
+    <article>
+      <p>Was passiert nach dem End-of-Life Ende Mai 2019?</p>
+      <ul class="build">
+        <li>Der Code wird nicht mehr weiter gepflegt.</li>
+        <li>Bug-Reports, die ausschließlich Contao 3.5 betreffen, werden geschlossen.</li>
+        <li>Feature-Requests bleiben offen und müssen nicht neu erstellt werden.</li>
+        <li>Das Extension Repository bleibt mindestens bis Mai 2022 online, jedoch kann man nur noch Freigaben für
+          bestehende Extensions und keine neuen Extensions mehr anlegen.</li>
+        <li>Das Live-Update bleibt ebenfalls bis auf Weiteres verfügbar.</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Extended Long-Term-Support?</p>
+    </article>
+  </slide>
+
+  <!--  ########## DSGVO ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>DSGVO</h2>
+      <h3>Contao DSGVO-konform verwenden</h3>
+    </hgroup>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Rechtsgrundlage + Schutzniveau + Informationspflicht</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Rechtsgrundlage</h2>
+    </hgroup>
+    <article>
+      <p>Für die rechtmäßige Verarbeitung geschützter Daten muss eine der in Art. 6 DSGVO genannten Voraussetzungen
+        erfüllt sein.</p>
+      <ul class="build">
+        <li>Einwilligung der betroffenen Person</li>
+        <li>Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen</li>
+        <li>Erfüllung einer rechtlichen Verpflichtung</li>
+        <li>Schutz lebenswichtiger Interessen</li>
+        <li>Wahrnehmung einer Aufgabe des öffentlichen Interesses</li>
+        <li>Berechtigtes Interesse (Interessenabwägung)</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Schutzniveau</h2>
+    </hgroup>
+    <article>
+      <p>Es sind geeignete technische und organisatorische Maßnahmen zu treffen, um die verarbeiteten Daten angemessen
+        zu schützen.</p>
+      <ul class="build">
+        <li>Vertraulichkeit</li>
+        <li>Integrität</li>
+        <li>Verfügbarkeit</li>
+        <li>Belastbarkeit</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>AV-Vertrag</h2>
+    </hgroup>
+    <article>
+      <p>Der AV-Vertrag soll hinreichend Garantien dafür bieten, dass geeignete technische und organisatorische
+        Maßnahmen so durchgeführt werden, dass die Verarbeitung im Einklang mit den Anforderungen der DSGVO erfolgt und
+        den Schutz der Rechte der betroffenen Person gewährleistet.</p>
+      <ul class="build">
+        <li>Der Auftragnehmer hat keine Entscheidungsbefugnis über die Daten</li>
+        <li>Der Auftragnehmer verfolgt keinen eigenen Geschäftszweck bezüglich der personenbezogenen Daten</li>
+        <li>Der Auftragnehmer steht in keiner vertraglichen Beziehung zu den Betroffenen</li>
+        <li>Der Auftraggeber ist nach außen hin für die Datenverarbeitung verantwortlich</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Informationspflicht</h2>
+    </hgroup>
+    <article>
+      <p>Aufklärung der Nutzer über alle Vorgänge, bei denen personenbezogene Daten verarbeitet werden, in leicht
+        zugänglicher Form und einer klaren und einfachen Sprache.</p>
+      <ul class="build">
+        <li>Dauer der Speicherung der personenbezogenen Daten</li>
+        <li>Zwecke der Datenverarbeitung und Rechtsgrundlage der Datenverarbeitung</li>
+        <li>Recht des Nutzers auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit
+          und Widerruf einer erklärten Einwilligung</li>
+        <li>Beschwerderecht bei einer Aufsichtsbehörde</li>
+        <li>Bestehen einer automatisierten Entscheidungsfindung</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Darf ich IP-Adressen jetzt nicht mehr speichern?</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>IP-Adressen</h2>
+    </hgroup>
+    <article>
+      <p>IP-Adressen sind personenbezogen und dürfen daher nur gespeichert werden, wenn die Datenerhebung und
+        -verwendung erforderlich ist, um die generelle Funktionsfähigkeit eines Dienstes zu gewährleisten.</p>
+      <ul class="build">
+        <li>IP-Adressen in Log-Dateien</li>
+        <li>IP-Adressen beim Double Opt-In</li>
+        <li>IP-Adressen bei Kommentaren</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>IP-Adressen</h2>
+    </hgroup>
+    <article>
+      <p>Konkrete Änderungen in Contao:</p>
+      <ul class="build">
+        <li>Keine IP-Adressen mehr in <code>tl_log</code></li>
+        <li>Vollständige IP-Adressen zum Nachweis eines Double Opt-In</li>
+        <li>Vollständige IP-Adressen bei Kommentaren</li>
+        <li>Anonymisierungsfunktion</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Brauche ich vor dem Setzen von Cookies jetzt eine Einwilligung?</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/cookies.jpg" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Cookies</h2>
+    </hgroup>
+    <article>
+      <p>Für Tracking-Cookies muss eine aktive Einwilligung eingeholt werden – eine konkludente Einwilligung durch
+        Weitersurfen oder eine Opt-Out-Lösung reichen nicht.</p>
+      <ul class="build">
+        <li>Diese Auslegung wird von den deutschen Datenschutzaufsichtsbehörden vertreten</li>
+        <li>Rechtssicherheit wird es vermutlich erst 2019 mit der ePrivacy-Verordnung geben</li>
+        <li>Session-Cookies, die keine Daten speichern und nicht für das Tracking verwendet werden, sind aller
+          Wahrscheinlicheit nach unproblematisch</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Braucht mein Kontaktformular jetzt eine Checkbox?</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Rechtsgrundlage</h2>
+    </hgroup>
+    <article>
+      <p>Die aktive Einwilligung in Form einer Pflicht-Checkbox bei einem Formular begründet weitgehende vertragliche
+        Ansprüche.</p>
+      <ul class="build">
+        <li><a href="https://www.datenschutz-guru.de/braucht-mein-kontaktformular-jetzt-eine-checkbox/" target="_blank" rel="noopener">Stephan Hansen-Oest – Braucht mein Kontaktformular jetzt eine Checkbox?</a></li>
+        <li>Wird eine Einwilligung eingeholt, muss auch der Widerruf der Einwilligung ermöglicht werden. Im Falle des
+          Widerrufs sind die Daten zu löschen.</li>
+        <li>Alternative Rechtsgrundlagen: Berechtigtes Interesse (Interessenabwägung) oder Erfüllung eines Vertrags oder
+          vorvertraglicher Maßnahmen</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/peterhense.jpg" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Was wurde bereits abgemahnt?</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Fehlende Datenschutzerklärung</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Verwendung von Google Fonts</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Fehlerhafte Einbindung von Google Analytics</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Google Analytics</h2>
+    </hgroup>
+    <article>
+      <p>Um Google Analytics rechtssicher nutzen zu können, müssen vier Voraussetzungen erfüllt sein:</p>
+      <ul class="build">
+        <li>Aktivierung der IP-Anonymisierung</li>
+        <li>Schaffung einer Opt-Out-Möglichkeit</li>
+        <li>Abschluss eines Auftragsverarbeitungsvertrages mit Google</li>
+        <li>Nutzerinformation im Rahmen der Datenschutzerklärung</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Unverschlüsselte Kontaktformulare</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/contao-privacy.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <div class="gallery">
+        <figure>
+          <img src="people/christian-barkowsky.jpg" width="300" height="300" alt>
+          <figcaption>Christian Barkowsky</figcaption>
+        </figure>
+        <figure>
+          <img src="people/david-maack.jpg" width="300" height="300" alt>
+          <figcaption>David Maack</figcaption>
+        </figure>
+        <figure>
+          <img src="people/fritz-michael-gschwantner.jpg" width="300" height="300" alt>
+          <figcaption>Fritz Michael Gschwantner</figcaption>
+        </figure>
+        <figure>
+          <img src="people/mathias-arzberger.jpg" width="300" height="300" alt>
+          <figcaption>Mathias Arzberger</figcaption>
+        </figure>
+        <figure>
+          <img src="people/nicky-hoff.jpg" width="300" height="300" alt>
+          <figcaption>Nicky Hoff</figcaption>
+        </figure>
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Privacy-Bundle</h2>
+    </hgroup>
+    <article>
+      <p>Datenschutz-Funktionen für Contao 3.5 und 4.4 (4.5).</p>
+      <ul class="build">
+        <li>Registrierungsmodul mit Einwilligung</li>
+        <li>Datenschutz-Übersicht im Backend</li>
+        <li>Analytics Opt-Out-Modul für das Frontend</li>
+        <li>YouTube-Videos über youtube-nocookie.com</li>
+        <li>Splash-Screen für YouTube- und Vimeo-Videos</li>
+      </ul>
+    </article>
+  </slide>
+
+  <!--  ########## CONATO 4.6 ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao 4.6</h2>
+      <h3>Ausblick auf die neue Version</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <article>
+      <div class="gallery">
+        <figure>
+          <img src="people/andreas-schempp.jpg" width="300" height="300" alt>
+          <figcaption>Andreas Schempp</figcaption>
+        </figure>
+        <figure>
+          <img src="people/david-greminger.jpg" width="300" height="300" alt>
+          <figcaption>David Greminger</figcaption>
+        </figure>
+        <figure>
+          <img src="people/fritz-michael-gschwantner.jpg" width="300" height="300" alt>
+          <figcaption>Fritz Michael Gschwantner</figcaption>
+        </figure>
+        <figure>
+          <img src="people/jim-schmid.jpg" width="300" height="300" alt>
+          <figcaption>Jim Schmid</figcaption>
+        </figure>
+        <figure>
+          <img src="people/joe-ray-gregory.jpg" width="300" height="300" alt>
+          <figcaption>Joe Ray Gregory</figcaption>
+        </figure>
+        <figure>
+          <img src="people/kamil-kuzminski.jpg" width="300" height="300" alt>
+          <figcaption>Kamil Kuzminski</figcaption>
+        </figure>
+        <figure>
+          <img src="people/leo-feyer.jpg" width="300" height="300" alt>
+          <figcaption>Leo Feyer</figcaption>
+        </figure>
+        <figure>
+          <img src="people/leopold-seckendorff.jpg" width="300" height="300" alt>
+          <figcaption>Leopold Seckendorff</figcaption>
+        </figure>
+        <figure>
+          <img src="people/martin-auswoeger.jpg" width="300" height="300" alt>
+          <figcaption>Martin Auswöger</figcaption>
+        </figure>
+        <figure>
+          <img src="people/yanick-witschi.jpg" width="300" height="300" alt>
+          <figcaption>Yanick Witschi</figcaption>
+        </figure>
+      </div>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Dateien per Drag and Drop hochladen</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <video src="videos/file-manager-1.mp4" width="1280" height="720" preload="none"></video>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Ordner per Drag and Drop hochladen</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <video src="videos/file-manager-2.mp4" width="1280" height="720" preload="none"></video>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Dateien und Ordner per Drag and Drop verschieben</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <video src="videos/file-manager-3.mp4" width="1280" height="720" preload="none"></video>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Seiten und Artikel per Drag und Drop verschieben</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <video src="videos/drag-and-drop.mp4" width="1280" height="712" preload="none"></video>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Multi-Page-Suche</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Cache-Invalidation</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>YouTube/Vimeo-Integration</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Seitentyp "Fehler 401"</h2>
+    </hgroup>
+    <article>
+      <p>In Contao 4.6 gibt es zusätzlich zum Seitentyp "Fehler 403" auch den Seitentyp "Fehler 401".</p>
+      <ul class="build">
+        <li>401 Unauthorized: Der Benutzer hat sich nicht authentifiziert</li>
+        <li>403 Forbidden: Der Benutzer hat sich authentifiziert, hat jedoch keine Berechtigung, um auf die angeforderte
+          Seite zuzugreifen</li>
+        <li>Seite "Fehler 401" → Bitte melde Dich an</li>
+        <li>Seite "Fehler 403" → Wende dich an den Admin</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Release-Plan</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Entwicklungsphase bis zum 30. Juni<sup>*</sup></li>
+        <li>Review-Phase bis zum 15. Juli<sup>*</sup></li>
+        <li>Release-Candidate-Phase bis zum 15. August<sup>*</sup></li>
+        <li>Release am 15. August<sup>*</sup></li>
+      </ul>
+      <p class="footnote">*) Die genannten Termine sind die Eckdaten aus dem Release-Plan. Die tatsächlichen
+        Termine können abweichen!</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Hackathon</p>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <div class="gallery">
+        <figure>
+          <img src="people/andreas-schempp.jpg" width="300" height="300" alt>
+          <figcaption>Andreas Schempp</figcaption>
+        </figure>
+        <figure>
+          <img src="people/david-greminger.jpg" width="300" height="300" alt>
+          <figcaption>David Greminger</figcaption>
+        </figure>
+        <figure>
+          <img src="people/fritz-michael-gschwantner.jpg" width="300" height="300" alt>
+          <figcaption>Fritz Michael Gschwantner</figcaption>
+        </figure>
+        <figure>
+          <img src="people/jim-schmid.jpg" width="300" height="300" alt>
+          <figcaption>Jim Schmid</figcaption>
+        </figure>
+        <figure>
+          <img src="people/leo-feyer.jpg" width="300" height="300" alt>
+          <figcaption>Leo Feyer</figcaption>
+        </figure>
+        <figure>
+          <img src="people/martin-auswoeger.jpg" width="300" height="300" alt>
+          <figcaption>Martin Auswöger</figcaption>
+        </figure>
+        <figure>
+          <img src="people/moritz-vondano.jpg" width="300" height="300" alt>
+          <figcaption>Moritz Vondano</figcaption>
+        </figure>
+        <figure>
+          <img src="people/yanick-witschi.jpg" width="300" height="300" alt>
+          <figcaption>Yanick Witschi</figcaption>
+        </figure>
+      </div>
+    </article>
+  </slide>
+
+  <!--  ########## CONTAO MANAGER ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/contao.svg" alt></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao Manager</h2>
+      <h3>Neue Funktionen in der nächsten Version</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <article>
+      <div class="gallery">
+        <figure>
+          <img src="people/bjarke-ammann.jpg" width="300" height="300" alt>
+          <figcaption>Bjarke Ammann</figcaption>
+        </figure>
+        <figure>
+          <img src="people/carolina-koehn.jpg" width="300" height="300" alt>
+          <figcaption>Carolina Koehn</figcaption>
+        </figure>
+        <figure>
+          <img src="people/christian-biondi.jpg" width="300" height="300" alt>
+          <figcaption>Christian Biondi</figcaption>
+        </figure>
+        <figure>
+          <img src="people/christian-feneberg.jpg" width="300" height="300" alt>
+          <figcaption>Christian Feneberg</figcaption>
+        </figure>
+        <figure>
+          <img src="people/kim-wormer.jpg" width="300" height="300" alt>
+          <figcaption>Kim Wormer</figcaption>
+        </figure>
+        <figure>
+          <img src="people/maren-lange.jpg" width="300" height="300" alt>
+          <figcaption>Maren Lange</figcaption>
+        </figure>
+        <figure>
+          <img src="people/markus-peltzer.jpg" width="300" height="300" alt>
+          <figcaption>Markus Peltzer</figcaption>
+        </figure>
+        <figure>
+          <img src="people/nicky-hoff.jpg" width="300" height="300" alt>
+          <figcaption>Nicky Hoff</figcaption>
+        </figure>
+        <figure>
+          <img src="people/stefan-preiss.jpg" width="300" height="300" alt>
+          <figcaption>Stefan Preiss</figcaption>
+        </figure>
+      </div>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>1.0.0 stable</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Metainformationen</p>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <div class="gallery">
+        <figure>
+          <img src="people/mathias-arzberger.jpg" width="300" height="300" alt>
+          <figcaption>Mathias Arzberger</figcaption>
+        </figure>
+      </div>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <video src="videos/package-search.mp4" width="1280" height="712" preload="none"></video>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/package-metadata.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Operations mixen</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <video src="videos/mixed-operations.mp4" width="1280" height="712" preload="none"></video>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Dry run</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/dry-run.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Windows-Support</p>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <div class="gallery">
+        <figure>
+          <img src="people/benedict-zinke.jpg" width="300" height="300" alt>
+          <figcaption>Benedict Zinke</figcaption>
+        </figure>
+        <figure>
+          <img src="people/maren-lange.jpg" width="300" height="300" alt>
+          <figcaption>Maren Lange</figcaption>
+        </figure>
+      </div>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>API-Zugriff für Dritte</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/oauth.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>One more thing</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Composer Cloud</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/cloud-2.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/cloud-6.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/cloud-7.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/cloud-9.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/cloud-10.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/cloud-11.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/cloud-12.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Composer Update</h2>
+    </hgroup>
+    <article>
+      <p>Das Auflösen von Abhängigkeiten ist die Aktion in Composer, die am meisten RAM benötigt
+        (NP-vollständiges Satisfiability-Problem, das vermutlich nicht effizient gelöst werden kann).</p>
+      <ul class="build">
+        <li>Lesen der <code>composer.json</code></li>
+        <li class="blue3">Lesen der Informationen aller Pakete in allen Versionen inklusive deren Abhängigkeiten und Suchen der
+          optimalen Paketkombination</li>
+        <li>Schreiben der <code>composer.lock</code></li>
+        <li>Installieren der Pakete gemäß der <code>composer.lock</code></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <article class="centered with-image">
+      <img src="images/composer-cloud.png" width="1280" height="720" alt>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Composer Cloud</h2>
+    </hgroup>
+    <article>
+      <p>Die Composer Cloud läuft auf einer Google Kubernetes Engine (GKE) in Frankfurt.</p>
+      <ul class="build">
+        <li>Cluster mit aktuell einem Node mit 7,5 GB RAM</li>
+        <li>4 Worker, die auf eure Jobs warten</li>
+        <li>Beliebig skalierbar</li>
+        <li>Monatliche Kosten: 80,- bis 100,- Euro</li>
+        <li>Es werden keine personenbezogene Daten verarbeitet</li>
+        <li>Jeder Job lebt nur eine Stunde und die Worker werden zerstört</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Wie kann ich Contao finanziell unterstützen?</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Partner | Gönner | Mitglied</p>
+    </article>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Noch Fragen?</p>
+    </article>
+  </slide>
+
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/contao.svg" alt></aside>
+    <article class="flexbox vleft auto-fadein">
+      <p>Vielen Dank für die Aufmerksamkeit</p>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+  var slides = document.getElementsByTagName('slide');
+
+  window.addEventListener('slideenter', function(e) {
+    var idx = parseInt(e.slideNumber) - 1,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.played.length) video.currentTime = 0;
+    video.play();
+  });
+
+  window.addEventListener('slideleave', function(e) {
+    var idx = parseInt(e.slideNumber) - 1,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    video.pause();
+  });
+
+  window.addEventListener('keypress', function(e) {
+    if (e.keyCode != 46) return;
+    var idx = parseInt(document.location.hash.substr(1)) - 1 || 0,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.ended) video.currentTime = 0;
+    video.paused ? video.play() : video.pause();
+  });
+</script>
+
+</body>
+</html>

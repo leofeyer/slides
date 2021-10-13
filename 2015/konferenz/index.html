@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank">
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h1 data-config-title></h1>
+      <h2 data-config-subtitle></h2>
+      <p data-config-presenter></p>
+    </hgroup>
+  </slide>
+
+  <!--  ########## ZAHLEN ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao in Zahlen</h2>
+      <h3>Aktuelle Kennziffern rund um Contao</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Downloads</h2>
+    </hgroup>
+    <article>
+      <p>Am 18.05.2015 war Contao 1.038.049 Mal heruntergeladen worden.</p>
+      <h3>Woher kommt die Zahl?</h3>
+      <ul>
+        <li>831.017 Downloads von sourceforge.net bis zum 30. August 2013</li>
+        <li>Seitdem Zählen der Aufrufe der URL <a href="https://download.contao.org">download.contao.org</a>
+          <ul>
+            <li>Contao-Check-Installer</li>
+            <li>Download-Button auf contao.org</li>
+          </ul>
+        </li>
+        <li>Downloads direkt von GitHub können nicht erfasst werden</li>
+        <li>Überschreiten der 1.000.000-Marke Ende Januar 2015</li>
+      </ul>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Webseiten</h2>
+    </hgroup>
+    <article>
+      <p>Aktuell gibt es knapp 70.000 Webseiten, die mit Contao laufen.</p>
+      <h3>Woher kommt die Zahl?</h3>
+      <ul>
+        <li>Die Webseite <a href="http://www.cmscrawler.com/tool/Contao_Open_Source_CMS">CMSCrawler</a>
+          hatte am 11.09.2014 weltweit 69.503 Contao-Installationen registriert</li>
+        <li>Laut Log-Datei des Live-Update-Servers ist diese Zahl realistisch</li>
+      </ul>
+      <p class="hint">Neuerdings zeigt CMSCrawler nur noch 28.131 Installationen an, wobei
+        auch die Zahl der insgesamt indizierten Systeme von 65.849.666 auf 47.846.594 gesunken ist. Laut Log-Datei
+        des Live-Update-Servers sind um die 70.000 Webseiten weiterhin realistisch.</p>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Marktanteil</h2>
+    </hgroup>
+    <article>
+      <p>Contao liegt bei <a href="http://www.cmscrawler.com/">CMSCrawler</a> auf Platz 12 (ehemals 16) von 770
+        Systemen.</p>
+      <h3>Marktanteile</h3>
+      <ul>
+        <li>Deutschland: Platz 6 (ehemals 8), 2,02% Marktanteil</li>
+        <li>Österreich: Platz 5 (ehemals 6), 2,39% Marktanteil</li>
+        <li>Schweiz: Platz 6 (ehemals 8), 1,80% Marktanteil</li>
+      </ul>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Beliebtheit</h2>
+    </hgroup>
+    <article>
+      <p>In der <a href="http://webkrauts.de/artikel/2014/jetzt-wissen-wir-es">Webworker-Umfrage 2014</a>
+        lag Contao mit 23% auf Platz 3 der beliebtesten Content-Management-Systeme.</p>
+      <h3>Die Top 5</h3>
+      <ul>
+        <li>62% nutzen Wordpress</li>
+        <li>27% nutzen TYPO3</li>
+        <li>23% nutzen Contao</li>
+        <li>15% nutzen Drupal</li>
+        <li>9% nutzen Joomla</li>
+      </ul>
+      <p class="footnote gray3">* Hinweis: Summe größer 100%, da Mehrfachnennungen möglich waren.</p>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <!--  ########## CONTAO 3.5 ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao 3.5</h2>
+      <h3>Die neue Long-Term-Support-Version</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contributors</h2>
+    </hgroup>
+    <article>
+      <p>Diese Leute haben an Contao 3.5 mitgewirkt:</p>
+      <div class="gallery" style="margin-top:1.5em">
+        <figure>
+          <img src="people/andreas-schempp.jpg" width="150" height="150" alt="">
+          <figcaption>Andreas Schempp</figcaption>
+        </figure>
+        <figure>
+          <img src="people/christian-kaiser.jpg" width="150" height="150" alt="">
+          <figcaption>Christian Kaiser</figcaption>
+        </figure>
+        <figure>
+          <img src="people/kamil-kuzminski.jpg" width="150" height="150" alt="">
+          <figcaption>Kamil Kuzminski</figcaption>
+        </figure>
+        <figure>
+          <img src="people/leo-feyer.jpg" width="150" height="150" alt="">
+          <figcaption>Leo Feyer</figcaption>
+        </figure>
+        <figure>
+          <img src="people/martin-auswoeger.jpg" width="150" height="150" alt="">
+          <figcaption>Martin Auswöger</figcaption>
+        </figure>
+      </div>
+      <div class="gallery" style="margin-top:1.5em">
+        <figure>
+          <img src="people/yanick-witschi.jpg" width="150" height="150" alt="">
+          <figcaption>Yanick Witschi</figcaption>
+        </figure>
+      </div>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>PHP 5.4</h2>
+    </hgroup>
+    <article>
+      <p>Neue Systemvoraussetzung: PHP 5.4 oder größer.</p>
+      <h3>Short-Open-Tags</h3>
+      <ul>
+        <li>Das Short-Tag <code>&lt;?=</code> ist standardmäßig verfügbar</li>
+        <li><code>&lt;?=</code> ist die Kurzform von <code>&lt;?php echo</code></li>
+        <li>Short-Tags erhöhen die Lesbarkeit der Templates</li>
+      </ul>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Short-Open-Tags</h2>
+    </hgroup>
+    <article>
+      <h3>Bisher</h3>
+      <pre class="prettyprint" data-lang="php">
+&lt;div class="<b>&lt;?php echo $this->class; ?&gt;</b>"&gt;
+  &lt;h1&gt;<b>&lt;?php echo $this->headline; ?&gt;</b>&lt;/h1&gt;
+  &lt;p class="<b>&lt;?php echo $this->cssClass; ?&gt;</b>"&gt;<b>&lt;?php echo $this->content; ?&gt;</b>&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+      <h3>Neu</h3>
+      <pre class="prettyprint" data-lang="php">
+&lt;div class="<b>&lt;?= $this->class ?&gt;</b>"&gt;
+  &lt;h1&gt;<b>&lt;?= $this->headline ?&gt;</b>&lt;/h1&gt;
+  &lt;p class="<b>&lt;?= $this->cssClass ?&gt;</b>"&gt;<b>&lt;?= $this->content ?&gt;</b>&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Templates vergleichen</h2>
+      <ul class="contributors">
+        <li><img src="people/yanick-witschi.jpg" width="150" height="150" alt=""></li>
+      </ul>
+    </hgroup>
+    <article>
+      <p>Die neue Diff-Ansicht für Templates ermöglicht den Vergleich eines angepassten Templates mit dem Original.</p>
+      <h3>Features</h3>
+      <ul>
+        <li>Anzeige des Pfads zum Originaltemplate</li>
+        <li>Diff-Ansicht des angepassten und des Originaltemplates</li>
+        <li>Vergleich mit anderen Templates derselben Gruppe</li>
+      </ul>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/template-diff.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Passwort ändern</h2>
+      <ul class="contributors">
+        <li><img src="people/leo-feyer.jpg" width="150" height="150" alt=""></li>
+      </ul>
+    </hgroup>
+    <article>
+      <p>Es wurde ein neues Frontend-Modul "Passwort ändern" hinzugefügt.</p>
+      <h3>Features</h3>
+      <ul>
+        <li>Bisher Änderung des Passworts über das Modul "Persönliche Daten"</li>
+        <li>Das alte Passwort wurde nicht abgefragt</li>
+        <li>Im Modul "Passwort ändern" wird zusätzlich zum neuen auch das alte Passwort abgefragt</li>
+      </ul>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/change-password.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Shift-Klick-Select</h2>
+      <ul class="contributors">
+        <li><img src="people/kamil-kuzminski.jpg" width="150" height="150" alt=""></li>
+        <li><img src="people/andreas-schempp.jpg" width="150" height="150" alt=""></li>
+        <li><img src="people/yanick-witschi.jpg" width="150" height="150" alt=""></li>
+      </ul>
+    </hgroup>
+    <article>
+      <p>Durch Halten der Shift-Taste beim Auswählen der Datensätze im Modus "mehrere bearbeiten" können mehrere
+        aufeinanderfolgende Reihen auf einmal ausgewählt werden.</p>
+      <h3>Features</h3>
+      <ul>
+        <li>An- oder Abwahl mehrerer Reihen auf einmal</li>
+        <li>Klick entweder auf die Checkbox oder auf die Reihe</li>
+      </ul>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/shift-click-select.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Newsletter-Abonnenten</h2>
+      <ul class="contributors">
+        <li><img src="people/leo-feyer.jpg" width="150" height="150" alt=""></li>
+      </ul>
+    </hgroup>
+    <article>
+      <p>Bisher konnten Newsletter-Abonnenten nicht zwischen Kanälen verschoben oder kopiert werden, weil nicht klar
+        war, ob dies den Double-Opt-In-Anforderungen genügt.</p>
+      <p>In Contao 3.5 ist dies nun möglich, allerdings wird dabei der Status des Abonnenten auf "manuell hinzugefügt"
+        geändert.</p>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/copy-recipient.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Model-Registry</h2>
+      <ul class="contributors">
+        <li><img src="people/yanick-witschi.jpg" width="150" height="150" alt=""></li>
+      </ul>
+    </hgroup>
+    <article>
+      <p>Durch eine Anpassung der Model-Registry konnte die Anzahl der Datenbank-Abfragen reduziert werden.</p>
+      <h3>Features</h3>
+      <ul>
+        <li>Unique Fields werden im DCA-Extractor registriert</li>
+        <li>Bei der Abfrage über ein Unique Field wird intern über den Primärschlüssel gesucht</li>
+        <li>Dadurch können bereits registrierte Models gefunden und geladen werden</li>
+        <li>Besonders relevant ist die Änderung für die Klasse <code>FilesModel</code></li>
+      </ul>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Datenbank-Indizes</h2>
+      <ul class="contributors">
+        <li><img src="people/christian-kaiser.jpg" width="150" height="150" alt=""></li>
+        <li><img src="people/leo-feyer.jpg" width="150" height="150" alt=""></li>
+      </ul>
+    </hgroup>
+    <article>
+      <p>Durch die Anpassung etlicher Datenbank-Indizes sowie die Rundung der Zeitstempel konnten viele
+        Datenbank-Abfragen optimiert werden.</p>
+      <h3>Features</h3>
+      <ul>
+        <li>Typ-kompatible Vergleiche wie z.B. <code>WHERE published='1'</code></li>
+        <li>Kombinierte Indizes wie z.B. <code>pid,ptable,invisible,sorting</code></li>
+        <li>Rundung der Zeitstempel auf Minuten:</li>
+      </ul>
+      <pre class="prettyprint" data-lang="php">
+$time = Date::floorToMinute();
+
+$query = "... WHERE (start='' OR start<='$time')"
+       . " AND (stop='' OR stop>'" . ($time + 60) . "')"
+</pre>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>IDE-Kompatibilität</h2>
+      <ul class="contributors">
+        <li><img src="people/leo-feyer.jpg" width="150" height="150" alt=""></li>
+        <li><img src="people/andreas-schempp.jpg" width="150" height="150" alt=""></li>
+      </ul>
+    </hgroup>
+    <article>
+      <p>Durch den exzessiven Einsatz von phpDoc-Kommentaren konnte die IDE-Kompatibilität soweit verbessert werden,
+        dass alle Klassen und Properties nun als Links erkannt werden.</p>
+      <pre class="prettyprint" data-lang="php">
+/**
+ * @property integer $id
+ * @property integer $tstamp
+ * @property string  $username
+ *
+ * @method static $this findById()
+ * @method static $this findByPk()
+ * @method static $this findByIdOrAlias()
+ *
+ * @method static \Model\Collection|\UserModel findByTstamp()
+ * @method static \Model\Collection|\UserModel findByName()
+ * @method static \Model\Collection|\UserModel findByEmail()
+ */
+</pre>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/ide-compatibility.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Fehlerseiten</h2>
+    </hgroup>
+    <article>
+      <p>Die Handhabung von Fehlerseiten wurde dahingehend geändert, dass nun für jede Art von 404er-Fehler die
+        404er-Seite gerendert wird.</p>
+      <h3>Mögliche Fehler</h3>
+      <ul>
+        <li>Ungültiger Seitenalias</li>
+        <li>Ungültiger News-/Eventalias</li>
+        <li>Ungültiger Auswahl im Seitenwähler</li>
+        <li>Ungültiges Datum</li>
+      </ul>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/404-contao-3.4.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/404-contao-3.5.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Release-Hinweise</h2>
+    </hgroup>
+    <article>
+      <p>Contao 3.5 ist die neue Long-Term-Support-Version.</p>
+      <h3>Änderungen</h3>
+      <ul>
+        <li>Contao 3.2 geht in die 6-monatige Übergangsphase</li>
+        <li>Contao 3.4 erreicht sein End-of-Life</li>
+        <li>Contao 3.5 mit erweitertem Support bis Mai 2017</li>
+      </ul>
+      <h3>3.5.0 stable</h3>
+      <p>Die finale Version 3.5.0 erscheint in der Woche nach der Konferenz.</p>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <!--  ########## CONTAO 4.0 ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao 4.0</h2>
+      <h3>Die neue Contao-Version mit Symfony</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contributors</h2>
+    </hgroup>
+    <article>
+      <p>Diese Leute haben an Contao 4.0 mitgewirkt:</p>
+      <div class="gallery" style="margin-top:1.5em">
+        <figure>
+          <img src="people/andreas-schempp.jpg" width="150" height="150" alt="">
+          <figcaption>Andreas Schempp</figcaption>
+        </figure>
+        <figure>
+          <img src="people/christian-schiffler.jpg" width="150" height="150" alt="">
+          <figcaption>Christian Schiffler</figcaption>
+        </figure>
+        <figure>
+          <img src="people/david-greminger.jpg" width="150" height="150" alt="">
+          <figcaption>David Greminger</figcaption>
+        </figure>
+        <figure>
+          <img src="people/dominik-tomasi.jpg" width="150" height="150" alt="">
+          <figcaption>Dominik Tomasi</figcaption>
+        </figure>
+        <figure>
+          <img src="people/kamil-kuzminski.jpg" width="150" height="150" alt="">
+          <figcaption>Kamil Kuzminski</figcaption>
+        </figure>
+      </div>
+      <div class="gallery" style="margin-top:1.5em">
+        <figure>
+          <img src="people/leo-feyer.jpg" width="150" height="150" alt="">
+          <figcaption>Leo Feyer</figcaption>
+        </figure>
+        <figure>
+          <img src="people/marco-biedermann.jpg" width="150" height="150" alt="">
+          <figcaption>Marco Biedermann</figcaption>
+        </figure>
+        <figure>
+          <img src="people/martin-auswoeger.jpg" width="150" height="150" alt="">
+          <figcaption>Martin Auswöger</figcaption>
+        </figure>
+        <figure>
+          <img src="people/yanick-witschi.jpg" width="150" height="150" alt="">
+          <figcaption>Yanick Witschi</figcaption>
+        </figure>
+      </div>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Symfony</h2>
+    </hgroup>
+    <article>
+      <p>Ja, Contao 4 läuft jetzt mit Symfony. Allerdings ist die Symfony-Umstellung nicht das einzige neue Feature
+        in Contao 4!</p>
+      <h3>Features</h3>
+      <ul>
+        <li>Integration von schema.org-Tags</li>
+        <li>Konsolidierung des Markups aller Formularfelder</li>
+        <li>Konsolidierung der CSS-Klassen und Widgets</li>
+        <li>Verbesserte TinyMCE-Konfiguration</li>
+        <li>Wegfall alter Resourcen (Safe-Mode-Hack, XHTML, etc.)</li>
+        <li>Und einiges mehr</li>
+      </ul>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Doch zunächst</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Warum?</h2>
+    </hgroup>
+    <article>
+      <p>Warum wir uns dafür entschieden haben, Contao umzubauen und auf ein externes Framwork umzustellen.</p>
+      <h3>Grundproblem</h3>
+      <ul>
+        <li>Es gibt zu wenig Contao-Entwickler</li>
+        <li>Seit Contao 3.0 im Oktober 2012 sind nur wenig neue Features für Entwickler hinzu gekommen</li>
+        <li>In der PHP-Welt haben sich jedoch viele neue Trends etabliert:
+          <ul>
+            <li>Paketverwaltung (Composer)</li>
+            <li>Kontinuierliche Integration (PHPUnit, Travis)</li>
+            <li>Professionalisierung (Scrutinizer, SensioLabsInsight)</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Anforderung</h2>
+    </hgroup>
+    <article>
+      <p>Entwickler möchten zeitgemäß arbeiten und diese neuen Technologien nutzen können.</p>
+      <h3>Lösung</h3>
+      <ul>
+        <li>Symfony als neue Code-Basis</li>
+        <li>Viele der neuen Tools sind standardmäßig integriert</li>
+        <li>Symfony ist weit verbreitet und sehr gut dokumentiert</li>
+        <li>Aktuell gibt es über <a href="http://knpbundles.com/">2.500 Symfony-Bundles</a></li>
+      </ul>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ergebnis</h2>
+    </hgroup>
+    <article>
+      <p>Contao 4 ist jetzt ein Symfony-Bundle, das zu jeder beliebigen Symfony-Applikation CMS-Funktionalität
+        hinzugefügen kann.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Das "Endprodukt" bleibt eine Symfony-Applikation</li>
+        <li>Dadurch kann jeder Symfony-Entwickler jetzt auch mit Contao arbeiten</li>
+        <li>Der neue Code ist getestet und folgt den Symfony-Standards</li>
+      </ul>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/contao-core-bundle.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Synergie-Effekt</h2>
+    </hgroup>
+    <article>
+      <p>Contao 4 ist für alle interessant, die CMS-Funktionalität in ihrer Symfony-Applikation benötigen.</p>
+      <h3>Erwartung</h3>
+      <ul>
+        <li>Contao etabliert sich als Alternative zu den bekannten Symfony CMS-Lösungen wie z.B. Redkite oder
+          SimpleCMS</li>
+        <li>Agenturen, die bereits mit Symfony arbeiten, nehmen Contao aus diesem Grund in ihr Portfolio auf</li>
+        <li>Die Entwickler der Agenturen arbeiten sich in Contao ein, was letztlich zu neuen Contao-Entwicklern
+          führt</li>
+      </ul>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Neue Features</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>TinyMCE-Templates</h2>
+      <ul class="contributors">
+        <li><img src="people/leo-feyer.jpg" width="150" height="150" alt=""></li>
+      </ul>
+    </hgroup>
+    <article>
+      <p>Die TinyMCE-Konfigurationsdateien sind nun echte Templates, die über den Template-Editor bearbeitet
+        werden können (z.B. <code>be_tinyMCE.html5</code>).</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Bearbeiten über das Backend möglich</li>
+        <li>Änderungen werden updatsicher gespeichert</li>
+        <li>Keine DCA-Anpassung beim Überschreiben der Standard-Templates mehr notwendig</li>
+      </ul>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/be-tinymce.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>schema.org</h2>
+      <ul class="contributors">
+        <li><img src="people/marco-biedermann.jpg" width="150" height="150" alt=""></li>
+        <li><img src="people/leo-feyer.jpg" width="150" height="150" alt=""></li>
+      </ul>
+    </hgroup>
+    <article>
+      <p>Einheitliche Auszeichnungssprache zur Kennzeichnung von Inhalten auf Webseiten, damit diese von Suchmaschinen
+        leichter erkannt werden.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Suchmaschinen können die Inhalte besser indexieren</li>
+        <li>Informationsmehrwert innerhalb der Suchergebnisse bei der Verwendung von Rich-Snippets mit schema.org</li>
+        <li>Auszeichnungen sind standardmäßig in Contao 4 integriert</li>
+      </ul>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/schema-event-list.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/schema-news-latest.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/schema-fe-page.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/schema-validator.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Template-Konsolidierung</h2>
+    </hgroup>
+    <article>
+      <p>Das Markup aller Templates wurde konsolidiert, so dass wiederkehrende Elemente immer gleich gerendert
+        werden.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Einfacheres CSS-Styling mit weniger Anweisungen möglich</li>
+        <li>Einfachere Integration von externen CSS-Frameworks (z.B. Bootstrap)</li>
+      </ul>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Formularfelder</h2>
+    </hgroup>
+    <article>
+      <p>Formularfelder haben nun systemweit ein einheitliches Markup:</p>
+      <pre class="prettyprint" data-lang="html">
+&lt;div class="widget widget-text"&gt;
+  &lt;label for="ctrl_16"&gt;Name&lt;/label&gt;
+  &lt;input type="text" name="name" id="ctrl_16" class="text"&gt;
+&lt;/div&gt;
+</pre>
+      <p>Formulare werden jetzt mit dem <code>button</code>-Element abgeschickt:</p>
+      <pre class="prettyprint" data-lang="html">
+&lt;div class="widget widget-submit"&gt;
+  &lt;button type="submit" id="ctrl_17" class="submit"&gt;Abschicken&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Tableless</h2>
+    </hgroup>
+    <article>
+      <p>Die Einstellung "tableless" wurde entfernt, da alle Templates nun immer ein tabellenloses Layout verwenden.</p>
+      <h3>form.css</h3>
+      <ul>
+        <li>Neues Stylesheet "Formulare" im Seitenlayout</li>
+        <li>Standardmäßige Formatierung: Labels oberhalb der Felder</li>
+        <li>Mit CSS-Klasse <code>horizontal-form</code>: Labels links neben den Feldern</li>
+        <li>Mit CSS-Klasse <code>inline-form</code>: alle Felder in einer Zeile</li>
+      </ul>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/horizontal-form.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Include-Elemente</h2>
+    </hgroup>
+    <article>
+      <p>Bei Verwendung eines Include-Elements, das ein anderes Element einbindet, werden die CSS-Klassen jetzt
+        zusammengeführt.</p>
+      <h3>Beispiel</h3>
+      <ul>
+        <li>Inhaltselement A mit der CSS-Klasse <code>elemA</code> bindet das Frontend-Modul B mit der CSS-Klasse
+          <code>elemB</code></li>
+        <li>In Contao 3 erhält das Element nur die CSS-Klasse <code>elemA</code></li>
+        <li>In Contao 4 erhält das Element jedoch beide Klassen: <code>elemA elemB</code></li>
+      </ul>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Include-Elemente</h2>
+    </hgroup>
+    <article>
+      <p>Folgendermaßen können die Elemente mittels CSS angesprochen werden:</p>
+      <pre class="prettyprint" data-lang="css">
+.elemA {
+    /* Nur das Inhaltselement */
+}
+
+.elemB {
+    /* Inhaltselement und Frontend-Modul */
+}
+
+.elemB:not(.elemA) {
+    /* Nur das Frontend-Modul */
+}
+</pre>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Document-Root</h2>
+    </hgroup>
+    <article>
+      <p>Einführung des Unterordners <code>/web</code>, in den alle öffentlichen Ressourcen verlinkt werden müssen
+        (Symlinks).</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Kein Verzeichnisschutz mittels <code>.htaccess</code> mehr</li>
+        <li>Dadurch Aufhebung der Bindung an den Apache-Webserver</li>
+      </ul>
+      <p class="hint">Bei den meisten Providern kann man im Administrationsbereich festlegen, auf welchen Ordner auf
+        dem Server eine Domain verweist. Dieser dann über die Domain erreichbare Ordner ist das Document-Root.</p>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Öffentliche Ordner</h2>
+    </hgroup>
+    <article>
+      <p>Durch die Umstellung auf den Unterordner als Document-Root ändert sich auch die Logik für öffentliche
+        Ordner:</p>
+      <h3>Bisher</h3>
+      <ul>
+        <li>Files-Ordner standardmäßig öffentlich</li>
+        <li>Unterordner müssen geschützt werden</li>
+      </ul>
+      <h3>Neu</h3>
+      <ul>
+        <li>Files-Ordner standardmäßig geschützt</li>
+        <li>Unterordner müssen freigegeben werden</li>
+      </ul>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Beispiel</h2>
+    </hgroup>
+    <article>
+      <figure class="left">
+        <img src="images/public-folders.png" width="323" height="480" alt="">
+      </figure>
+      <pre style="background:none;padding-top:35px;line-height:1.1">
+    <-- Standardmäßig geschützt
+
+    <-- Öffentlicher Unterordner
+    <-- Unterordner sind automatisch auch öffentlich!
+</pre>
+      <pre style="background:none;padding-top:128px;line-height:1.1">
+    <-- Öffentlicher Unterordner
+    <-- Öffentlicher Unterordner
+</pre>
+      <pre style="background:none;padding-top:58px;line-height:1.1">
+    <-- Öffentlicher Hauptordner (optional)
+</pre>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Aufräumarbeiten</h2>
+    </hgroup>
+    <article>
+      <p>Folgende veraltete Features wurden in Contao 4 entfernt:</p>
+      <h3>Entfernt</h3>
+      <ul>
+        <li>Safe-Mode-Hack</li>
+        <li>XHTML-Unterstützung</li>
+        <li>IE6-Warnung</li>
+        <li>Abstand davor/danach</li>
+      </ul>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Release-Hinweise</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Update von Contao 3</h2>
+    </hgroup>
+    <article>
+      <p>Aktuell ist das Contao 4-Update im Installtool, das die Datenbank aktualisiert, nicht vollständig. Deshalb:</p>
+      <p style="font-size:2em;color:#c00;font-weight:bold;margin-bottom:.5em">Aktuell ist noch kein Update von Contao
+        3.* auf Contao 4 möglich!</p>
+      <h3>Verwendung von Contao 4</h3>
+      <ul>
+        <li>Vorerst nur für neue Projekte</li>
+        <li>Nur wenn die noch fehlenden Features kein Problem sind</li>
+        <li>Composer-Nutzung (Kommandozeile) vorausgesetzt</li>
+      </ul>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Semantische Versionierung</h2>
+    </hgroup>
+    <article>
+      <p>Beginnend mit Contao 4 verwenden wir <a href="http://semver.org">semantische Versionierung</a>.</p>
+      <figure class="center">
+        <img src="images/version-syntax.jpg" width="640" height="150" alt="" style="margin:10px 0 -20px">
+      </figure>
+      <h3>Regeln</h3>
+      <ul>
+        <li>Bugfix-Releases dürfen nur rückwärtskompatible Fixes enthalten</li>
+        <li>Minor-Releases können rückwärtskompatible neue Features enthalten</li>
+        <li>Jede inkompatible API-Änderung muss als neue Major-Version veröffentlicht werden</li>
+      </ul>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Auswirkung</h2>
+    </hgroup>
+    <article>
+      <p>Da per Definition jede inkompatible API-Änderung als neue Major-Version veröffentlicht werden muss, kann es
+        sein, dass Contao 5 wesentlich früher kommt, als es der bisherige Release-Zyklus vermuten lässt!</p>
+      <p>Wir empfehlen daher allen Autoren, ihre Bücher oder Videos nicht mit dem Zusatz "… mit Contao 4" zu betiteln,
+        da es im ungünstigsten Fall sein könnte, dass bis zur Veröffentlichung bereits Contao 5 erschienen ist.</p>
+      <p>Stattdessen wäre die Formulierung "kompatibel ab Contao 4" denkbar.</p>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Release-Zyklus</h2>
+    </hgroup>
+    <article>
+      <p>Die nächsten Releases-Termine sind wie folgt:</p>
+      <h3>Termine</h3>
+      <ul>
+        <li>Contao 4.0.0 - Mai 2015</li>
+        <li>Contao 4.1.0 - November 2015</li>
+        <li>Contao 4.2.0 - Mai 2016</li>
+        <li>Contao 4.3.0 LTS - November 2016</li>
+      </ul>
+    </article>
+    <div class="who">Y</div>
+  </slide>
+
+  <!--  ########## RELAUNCH ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>contao.org</h2>
+      <h3>Relaunch der Projektwebseite</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contributors</h2>
+    </hgroup>
+    <article>
+      <p>Diese Leute haben am Relaunch der Projektwebseite mitgewirkt:</p>
+      <div class="gallery" style="margin-top:1.5em">
+        <figure>
+          <img src="people/kim-wormer.jpg" width="150" height="150" alt="">
+          <figcaption>Kim Wormer</figcaption>
+        </figure>
+        <figure>
+          <img src="people/bjarke-ammann.jpg" width="150" height="150" alt="">
+          <figcaption>Bjarke Ammann</figcaption>
+        </figure>
+        <figure>
+          <img src="people/alex-martinez.jpg" width="150" height="150" alt="">
+          <figcaption>Alex Martinez</figcaption>
+        </figure>
+        <figure>
+          <img src="people/blair-winans.jpg" width="150" height="150" alt="">
+          <figcaption>Blair Winans</figcaption>
+        </figure>
+        <figure>
+          <img src="people/thomas-weitzel.jpg" width="150" height="150" alt="">
+          <figcaption>Thomas Weitzel</figcaption>
+        </figure>
+      </div>
+      <div class="gallery" style="margin-top:1.5em">
+        <figure>
+          <img src="people/oliver-reiff.jpg" width="150" height="150" alt="">
+          <figcaption>Oliver Reiff</figcaption>
+        </figure>
+      </div>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Projekt</h2>
+    </hgroup>
+    <article>
+      <p>Ziel des Projektes ist der Relaunch der Projektwebseite contao.org.</p>
+      <h3>Konzept</h3>
+      <ul>
+        <li>Zielgruppe der Webseite sind Entscheider</li>
+        <li>Reduziertes Design, dadurch mehr Fokus auf die Inhalte</li>
+        <li>Ganzheitlicher Überblick über das Contaoversum
+          <ul>
+            <li>Auflistung aller bestehende Kanäle</li>
+            <li>Auflistung aller Termine (offizielle, Community, Schulungen etc.)</li>
+          </ul>
+        </li>
+      </ul>
+      <p>Mit dem Design der Webseite haben wir die Agentur TOZEN beauftragt, einen langjährigen Premium-Partner.</p>
+    </article>
+    <div class="who">K</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Herausforderung</h2>
+    </hgroup>
+    <article>
+      <p>Die größte Herausforderung war es, die zahlreichen Inhalte in der verfügbaren Zeit durchzusehen
+        und neu zu strukturieren.</p>
+      <h3>Weitere Herausforderungen</h3>
+      <ul>
+        <li>Viele Inhalte in ein reduziertes Design zu bringen</li>
+        <li>Koordination aller Beteiligten (Agentur, Redakteure, Übersetzer, Programmierer)</li>
+        <li>Migration der bestehenden Dienste (ER2, Partnerliste etc.)</li>
+      </ul>
+    </article>
+    <div class="who">K</div>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-home-1.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-home-2.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-home-3.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-home-4.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-home-5.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-home-6.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-home-7.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-home-8.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-home-9.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-home-10.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-case-studies-1.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-case-studies-2.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-partner-1.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-partner-2.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-features-1.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-features-2.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-features-3.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-features-4.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-features-5.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/website-features-6.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>International</h2>
+    </hgroup>
+    <article>
+      <p>Neben der bereits vorhandenen deutschen und englischen Übersetzung ist die Projektwebseite nun auch
+        in Spanisch verfügbar.</p>
+      <h3>Übersetzt wurde</h3>
+      <ul>
+        <li>Die komplette Seitenstruktur</li>
+        <li>Alle Inhalte</li>
+        <li>Alle Erweiterungen (ER2, Partnerliste etc.)</li>
+      </ul>
+      <p>Es ist geplant, die Webseite noch in weitere Sprachen zu übersetzen, sofern wir die entsprechenden Helfer
+        finden.</p>
+    </article>
+    <div class="who">K</div>
+  </slide>
+
+  <!--  ########## DOKUMENTATION ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Dokumentation</h2>
+      <h3>Die neuen Gitbooks auf docs.contao.org</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contributors</h2>
+    </hgroup>
+    <article>
+      <p>Diese Leute haben an der Dokumentation mitgewirkt:</p>
+      <div class="gallery" style="margin-top:1.5em">
+        <figure>
+          <img src="people/andreas-schempp.jpg" width="150" height="150" alt="">
+          <figcaption>Andreas Schempp</figcaption>
+        </figure>
+        <figure>
+          <img src="people/lionel-maccaud.jpg" width="150" height="150" alt="">
+          <figcaption>Lionel Maccaud</figcaption>
+        </figure>
+      </div>
+    </article>
+    <div class="who">L</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Problematik</h2>
+    </hgroup>
+    <article>
+      <p>Die bisherige Lösung, nämlich die Integration der Dokumentation in die Projektwebseite, hat einige gravierende
+        Nachteile.</p>
+      <h3>Nachteile</h3>
+      <ul>
+        <li>Bindung an die Contao-Installation</li>
+        <li>Umständliche Navigation innerhalb des Handbuches</li>
+        <li>Limitiert auf die Sprachen der Webseite</li>
+        <li>Kein Bereich für allgemeine Informationen</li>
+      </ul>
+    </article>
+    <div class="who">A</div>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/documentation-1.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Tools</h2>
+    </hgroup>
+    <article>
+      <p>Wir haben uns etliche Tools wie z.B. Read the Docs, GitBook oder Sphinx angesehen und miteinander
+        verglichen.</p>
+      <h3>Anforderungen</h3>
+      <ul>
+        <li>Übersicht der verfügbaren Ressourcen</li>
+        <li>Bestehenden Quellcode möglichst weiter verwenden</li>
+        <li>Lesbarkeit erhöhen (Navigation, responsive Design)</li>
+      </ul>
+    </article>
+    <div class="who">A</div>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>GitBook</h2>
+    </hgroup>
+    <article>
+      <p>Wir haben uns schließlich für <a href="https://www.gitbook.com">GitBook</a> entschieden.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Open Source</li>
+        <li>Beliebige Anzahl an Sprachen möglich</li>
+        <li>Generiert eine HTML- und eine PDF-Version</li>
+        <li>Integration der bisherigen Ressourcen (Git und Markdown)</li>
+        <li>Automatische Prüfung und Veröffentlichung von Änderungen</li>
+      </ul>
+    </article>
+    <div class="who">A</div>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/documentation-2.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/documentation-3.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/documentation-4.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/documentation-5.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/documentation-6.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Erweiterbar</h2>
+    </hgroup>
+    <article>
+      <p>GitBook lässt sich sehr gut anpassen und erweitern.</p>
+      <h3>Ressourcen</h3>
+      <ul>
+        <li>Plugins</li>
+        <li>Eigene Templates</li>
+        <li>Eigene Markup-Tags</li>
+        <li>Integration von disqus.com (Diskussions-Plattform)</li>
+        </ul>
+    </article>
+    <div class="who">A</div>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/documentation-7.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Zukunft</h2>
+    </hgroup>
+    <article>
+      <p>Die Pflege der Doku erfolgt weiterhin auf GitHub unter
+        <a href="https://github.com/contao/docs/">contao/docs</a>.</p>
+      <h3>Helfer gesucht</h3>
+      <ul>
+        <li>Aktualisierung der Inhalte</li>
+        <li>Erstellen weiterer Übersetzungen</li>
+        <li>Erweiterung der Entwickler-Doku</li>
+      </ul>
+    </article>
+    <div class="who">A</div>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/documentation-8.png" width="1024" height="768" alt="">
+  </slide>
+
+  <!--  ########## SCHLUSSWORT ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Schlusswort</h2>
+      <h3>Was es noch zu sagen gibt</h3>
+    </hgroup>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Noch Fragen?</p>
+    </article>
+  </slide>
+
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <p>Vielen Dank für die Aufmerksamkeit</p>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+  var slides = document.getElementsByTagName('slide');
+
+  window.addEventListener('slideenter', function(e) {
+    var idx = parseInt(e.slideNumber) - 1,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.played.length) video.currentTime = 0;
+    video.play();
+  });
+
+  window.addEventListener('keypress', function(e) {
+    if (e.keyCode != 112) return;
+    var idx = parseInt(document.location.hash.substr(1)) - 1 || 0,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.ended) video.currentTime = 0;
+    video.paused ? video.play() : video.pause();
+  });
+</script>
+
+</body>
+</html>
