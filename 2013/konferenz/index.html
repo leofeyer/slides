@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank">
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h1 data-config-title></h1>
+      <h2 data-config-subtitle></h2>
+      <p data-config-presenter></p>
+    </hgroup>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Rückblick auf die letzten 12 Monate</p>
+    </article>
+  </slide>
+
+  <!--  ########## ASSOCIATION ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao-Association</h2>
+      <h3>Gründung eines Contao-Fördervereins (Mai 2012)</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao-Association</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Förderverein
+          <ul>
+            <li>Finanzierung der Weiterentwicklung von Contao</li>
+            <li>Kommunikation nach innen und außen</li>
+            <li>Organisation von Events wie z.B. Konferenz oder Camp</li>
+          </ul>
+        </li>
+        <li>Eckdaten (Stand April 2013)
+          <ul>
+            <li>110 Mitglieder, 13.500,00 Euro Budget</li>
+          </ul>
+        </li>
+        <li>Bisherige Projekte
+          <ul>
+            <li>Einrichtung eines Community-Servers</li>
+            <li>Vorfinanzierung des Camps und der Konferenz</li>
+            <li>Werbemittelunterstützung (z.B. Flyer)</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <!--  ########## CONTAO LIVE UPDATE ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao Live Update</h2>
+      <h3>Neue Contao Live Update Major-Version (Juni 2012)</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Live Update</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Beliebige Upgrades und Downgrades
+          <ul>
+            <li>Auch das Reparieren einer Installation ist möglich</li>
+            <li>Alle Contao-Versionen ab 2.9.0 werden unterstützt</li>
+          </ul>
+        </li>
+        <li>Automatisches Backup/Restore der Datenbank</li>
+        <li>Diff-Ansicht der angepassten Template-Dateien</li>
+        <li>Anzeige von distributionsfremden Dateien</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/live-update.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <!--  ########## CONTAO-TOOLS ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao-Tools</h2>
+      <h3>Contao-Tools für Google Chrome (Juli 2012)</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao-Tools</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Erweiterung für Google Chrome</li>
+        <li>Responsive Grid-Overlay für das Contao CSS-Framework</li>
+        <li>Linksammlung zu Contao
+          <ul>
+            <li>Deeplinks auf contao.org</li>
+            <li>Link zum Ticketsystem</li>
+            <li>Link zur Community-Plattform</li>
+            <li>Link zum Contao-Wiki</li>
+            <li>Link zur API-Dokumentation</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="screens/contao-tools.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <!--  ########## CONTAO-CHECK ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao-Check</h2>
+      <h3>Contao-Check mit erweiterten Funktionen (August 2012)</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao-Check</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li><a href="https://github.com/contao/check">https://github.com/contao/check</a></li>
+        <li>Prüfen der Contao-Systemvoraussetzungen
+          <ul>
+            <li>PHP-Version</li>
+            <li>Extension Repository</li>
+            <li>Live Update</li>
+            <li>Safe Mode Hack</li>
+          </ul>
+        </li>
+        <li>Validierung einer bestehenden Installation
+          <ul>
+            <li>Korrupte und fehlende Dateien finden</li>
+          </ul>
+        </li>
+        <li>Contao über den Web-Installer direkt installieren</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="screens/check-index.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="screens/check-live-update.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="screens/check-validator.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="screens/check-installer.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <!--  ########## CONTAO-CAMP ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao-Camp</h2>
+      <h3>Contao-Camp 2012 in Essen (November 2012)</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao-Camp</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Zweitägiges Barcamp zum Thema "Contao"
+          <ul>
+            <li>100 Teilnehmer im Unperfekthaus in Essen</li>
+            <li>Das Programm wird von den Teilnehmern festgelegt</li>
+          </ul>
+        </li>
+        <li>Zweite große Contao-Veranstaltung neben der Konferenz
+          <ul>
+            <li>Contao-Konferenz im Mai</li>
+            <li>Contao-Camp im November</li>
+          </ul>
+        </li>
+        <li>Eindrücke im Internet:
+          <ul>
+            <li><a href="http://www.contao-camp.de/eindruecke.html">http://www.contao-camp.de/eindruecke.html</a></li>
+            <li>Und auf <a href="https://www.youtube.com/results?search_query=contao+camp">YouTube</a>
+              unter dem Suchbegriff "Contao-Camp"</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/contao-camp.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/contao-camp-1.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <!--  ########## CONTAO THEME-STORE ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao Theme-Store</h2>
+      <h3>Start des offiziellen Contao Theme-Store (Dezember 2012)</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Zentrale Anlaufstelle</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li><a href="https://themes.contao.org">https://themes.contao.org</a></li>
+        <li>Umfangreiche Filtermöglichkeiten
+          <ul>
+            <li>Responsive Design</li>
+            <li>Verwendung der Originaltemplates</li>
+            <li>Interner CSS-Editor oder externe Stylesheets</li>
+            <li>Zukünftige Updates inklusive</li>
+          </ul>
+        </li>
+        <li>Kostenlose und kostenpflichtige Themes
+          <ul>
+            <li>Leider noch keine kostenlose Themes für Contao 3</li>
+            <li>Vergünstigungen für Anbieter kostenloser Themes</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="screens/theme-store.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Vorteile für Nutzer</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Prüfung der Abieter durch uns</li>
+        <li>Sicheres Bezahlen und funktionierende Downloads</li>
+        <li>Kaufabwicklung nach deutschem Recht</li>
+        <li>Supportanfragen können direkt an uns gestellt werden</li>
+        <li>Zukünftige Updates können – sofern inklusive – direkt über die
+          Bestellhistorie im Kundenkonto bezogen werden</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Vorteile für Anbieter</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Seriöser Geschäftspartner</li>
+        <li>Monatliche Auszahlung der Umsätze</li>
+        <li>Hohes Besucheraufkommen</li>
+        <li>Keine Kosten für Werbung oder eine eigene Plattform</li>
+        <li>Selbstgehostete Live-Demo der Themes möglich</li>
+        <li>Detaillierte Umsatzstatistik</li>
+        <li>Paralleler Betrieb eines eigenen Shops erlaubt</li>
+      </ul>
+    </article>
+  </slide>
+
+  <!--  ########## CONTAO-HANDBUCH ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao-Handbuch</h2>
+      <h3>Umstellung der Contao-Dokumentation (Januar 2013)</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Neuer Workflow</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Markdown-Dokumente</li>
+        <li>Verwaltet in einem Git-Repository
+          <ul>
+            <li><a href="https://github.com/contao/docs">https://github.com/contao/docs</a></li>
+            <li>Ein Zweig pro Contao-Version (2.11, 3.0, 3.1)</li>
+          </ul>
+        </li>
+        <li>Ausgabe als HTML auf contao.org
+          <ul>
+            <li>Unterteilung nach Versionen</li>
+            <li>Erstellung des Inhaltsverzeichnis</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="screens/handbuch-github.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Kollaboratives Arbeiten möglich</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Jeder kann mithelfen</li>
+        <li>Gleiches Prinzip wie beim Arbeiten am Core
+          <ul>
+            <li>Lokale Kopie des Repos auschecken</li>
+            <li>Änderungen und Ergänzungen vornehmen</li>
+            <li>Pull Request auf GitHub erstellen</li>
+          </ul>
+        </li>
+        <li>Beim nächsten Import auf contao.org werden die Änderungen
+          automatisch übernommen</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="screens/handbuch-contao.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="screens/handbuch-contao-1.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="screens/handbuch-contao-2.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Geringe Beteiligung</h2>
+    </hgroup>
+    <article>
+      <p>Leider gibt es bislang nur sieben Mitwirkende:</p>
+      <div class="gallery">
+        <figure>
+          <img src="people/andreas-schempp.jpg" width="120" height="120" alt="">
+          <figcaption>Andreas Schempp</figcaption>
+        </figure>
+        <figure>
+          <img src="people/hannes.jpg" width="120" height="120" alt="">
+          <figcaption>Hannes</figcaption>
+        </figure>
+        <figure>
+          <img src="people/kamil-kuzminski.jpg" width="120" height="120" alt="">
+          <figcaption>Kamil Kuzminski</figcaption>
+        </figure>
+        <figure>
+          <img src="people/leo-feyer.jpg" width="120" height="120" alt="">
+          <figcaption>Leo Feyer</figcaption>
+        </figure>
+        <figure>
+          <img src="people/lionel-maccaud.jpg" width="120" height="120" alt="">
+          <figcaption>Lionel MacCaud</figcaption>
+        </figure>
+        <figure>
+          <img src="people/tristan-lins.jpg" width="120" height="120" alt="">
+          <figcaption>Tristan Lins</figcaption>
+        </figure>
+        <figure>
+          <img src="people/yanick-witschi.jpg" width="120" height="120" alt="">
+          <figcaption>Yanick Witschi</figcaption>
+        </figure>
+      </div>
+      <p>Software ohne Dokumentation ist entweder absolut selbsterklärend oder
+        weitestgehend nutzlos! Umso dankbarer sind wir, dass sich wenigsten die
+        sieben Helfer gefunden haben.</p>
+      <p>Wir wünschen uns für die Zukunft aber eine regere Beteiligung.</p>
+    </article>
+  </slide>
+
+  <!--  ########## CEBIT 2013 ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao goes CeBIT</h2>
+      <h3>Contao beim CMS-Garden auf der CeBIT (März 2013)</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao goes CeBIT</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>CMS-Garden
+          <ul>
+            <li>13 CMS an einem Stand</li>
+            <li>Präsentiert von fachkundigen Community-Mitgliedern</li>
+          </ul>
+        </li>
+        <li>Informationen im Internet:
+          <ul>
+            <li><a href="http://www.cmsgarden.org">http://www.cmsgarden.org</a></li>
+            <li><a href="https://www.facebook.com/CmsGarden">https://www.facebook.com/CmsGarden</a></li>
+            <li>Und auf <a href="http://www.youtube.com/results?search_query=cmsgarden">YouTube</a>
+              unter dem Suchbegriff "cmsgarden"</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/contao-cebit.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/contao-cebit-1.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/contao-cebit-2.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <!--  ########## CONTAO-NORDTAG ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao-Nordtag</h2>
+      <h3>Contao-Nordtag 2013 in Hamburg (März 2013)</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao-Nordtag</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Eintägiges Event in Hamburg
+          <ul>
+            <li>Organsiert von der Community</li>
+            <li>75 Teilnehmer</li>
+            <li>Acht Vorträge/Sessions verteilt auf zwei Räume</li>
+          </ul>
+        </li>
+        <li>Eindrücke  im Internet:
+          <ul>
+            <li><a href="http://contao-nordtag.de">http://contao-nordtag.de</a></li>
+            <li>Und auf <a href="http://www.youtube.com/results?search_query=contao-nordtag">YouTube</a>
+              unter dem Suchbegriff "Contao-Nordtag"</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/contao-nordtag.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <!--  ########## CONTAO IM TV ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao im TV</h2>
+      <h3>Contao auf Sendung im ComputerClub² (April 2013)</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao im TV</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Sendung des ComputerClub²
+          <ul>
+            <li>600.000 Aufrufe der Webseite pro Monat</li>
+            <li>340.000 Downloads des wöchentlichen Podcasts</li>
+            <li>150.000 Downloads der monatlichen TV-Sendungen</li>
+          </ul>
+        </li>
+        <li>Folge 106 vom 18. April 2013
+          <ul>
+            <li>Kabel: NRW-TV</li>
+            <li>Astra: Dr. Dish TV</li>
+            <li>Web: <a href="http://www.cczwei.de/index.php?id=tvissuearchive&tvissueid=127">cczwei.de</a></li>
+          </ul>
+        </li>
+        <li>Contao wird präsentiert von Christian de la Haye</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/cc2-interview.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <!--  ########## CONTAO 3.1 ##########  -->
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Blick auf die nächste Contao-Version</p>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao 3.1</h2>
+      <h3>Termin für das finale Release ist Mai 2013</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Automatische Synchronisation</h2>
+    </hgroup>
+    <article>
+      <p>Der Dateiwähler zeigt das Dateisystem in Echtzeit an und fügt die
+        ausgewählten Dateien bzw. Ordner automatisch zum DBAFS hinzu, sofern sie
+        noch keinen Datenbank-Eintrag haben.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Per FTP hochgeladene Dateien stehen sofort zur Verfügung</li>
+        <li>Die Notwendigkeit einer manuellen Synchronisation entfällt</li>
+      </ul>
+      <p style="margin-top: 2.5em; font-size: 90%">Hinweis: Der automatische
+        Abgleich mit dem DBAFS funktioniert nur für neue Dateien. Werden Dateien
+        bzw. Ordner per FTP umbenannt und/oder verschoben, muss nach wie vor
+        synchronisiert werden.</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/autosync-database.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Verbesserte Seiten- und Dateiwähler</h2>
+    </hgroup>
+    <article>
+      <p>Die Seiten- und Dateiwähler können nun auf Teilbäume begrenzt werden,
+        so wie es bereits in der Seitenstruktur und in der Dateiverwaltung der
+        Fall ist. Zudem kann man nun im Popup-Dialog zwischen dem Wähler und der
+        Seitenstruktur bzw. der Dateiverwaltung hin und her wechseln.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Bessere Navigation bei vielen Nodes</li>
+        <li>Nodes können direkt im Popup-Dialog geändert werden</li>
+        <li>Änderungen stehen sofort im Wähler zur Verfügung</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/new-pickers.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>TinyMCE-Picker</h2>
+    </hgroup>
+    <article>
+      <p>Die TinyMCE-Picker, mit denen man Seiten oder Bilder auswählen kann,
+        wurden durch den Contao-Seitenwähler bzw. Dateiwähler ersetzt.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Gewohntes Benutzerinterface</li>
+        <li>Die Picker sind navigierbar und durchsuchbar</li>
+        <li>Deutlich einfacher zu verwenden</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/tinymce-picker.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Klicken und Bearbeiten</h2>
+    </hgroup>
+    <article>
+      <p>Elemente können zur Bearbeitung direkt angeklickt werden, ohne dass die
+        entsprechenden Icons dafür verwendet werden müssen.</p>
+      <p>Zusammen mit dem Klick muss die Control-Taste (Windows/Unix) bzw. die
+        Command-Taste (Mac OS) gedrückt werden:</p>
+      <ul>
+        <li><code>[Ctrl]+Klick</code>: Element bearbeiten</li>
+        <li><code>[Ctrl]+[Shift]+Klick</code>: Einstellungen bearbeiten</li>
+      </ul>
+      <p>Beziehungsweise auf Mac OS:</p>
+      <ul>
+        <li><code>[Cmd]+Klick</code>: Element bearbeiten</li>
+        <li><code>[Cmd]+[Shift]+Klick</code>: Einstellungen bearbeiten</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/control-click.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Drag und Drop statt Klick</h2>
+    </hgroup>
+    <article>
+      <p>Alle Elemente, die bisher mittels der grünen Pfeile schrittweise hoch
+        und runter geschoben werden konnten, lassen sich jetzt bequem per Drag
+        und Drop verschieben.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Bessere und inuitivere Handhabung</li>
+        <li>Verschieben um mehrere Positionen in einem Schritt</li>
+        <li>Ein einheitliches Icon für Drag und Drop</li>
+        <li>Im Parent View scrollt die Seite beim Verschieben mit</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/drag-drop.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Frontend-Module deaktivieren</h2>
+    </hgroup>
+    <article>
+      <p>Frontend-Module können direkt im Seitenlayout deaktiviert werden und
+        werden dann nicht auf der Webseite angezeigt.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Aktivieren/Deaktivieren direkt im Seitenlayout möglich</li>
+        <li>Die Liste der eingebundenen Module muss nicht verändert werden</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/disable-modules.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Details im Popup-Fenster</h2>
+    </hgroup>
+    <article>
+      <p>Die Detailansicht eines Elements wird in einem Popup-Fenster
+        angezeigt.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Kein Neuladen der Seite notwendig</li>
+        <li>Schneller Zugriff auf mehrere Elemente nacheinander</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/modal-details.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Bezogene Elemente bearbeiten</h2>
+    </hgroup>
+    <article>
+      <p>Alle Elemente, die in anderen Elementen verlinkt werden, wie z.B.
+        Aliaselemente in Artikeln oder Frontend-Module im Seitenlayout, können
+        in einem modalen Fenster direkt bearbeitet werden.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Schneller Zugriff auf das bezogene Element</li>
+        <li>Die ursprüngliche Eingabemaske wird nicht verlassen</li>
+        <li>Konstistente Zurück-Naviation</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/edit-related-elements.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Multi-Tab-Unterstützung</h2>
+    </hgroup>
+    <article>
+      <p>Werden im Backend Links in einem neuen Tab oder Fenster geöffnet,
+        bleibt die Browser-Historie davon unbeeinflusst. Jedes Tab bzw. Fenster
+        bekommt seine eigene Historie.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Der Zurück-Button funktioniert auch bei mehreren Tabs</li>
+        <li>Speichern und Schließen bringt den Benutzer immer zur korrekten,
+          davor besuchten Seite zurück</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/tab-referer.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Pflichtfelder und Autosubmit</h2>
+    </hgroup>
+    <article>
+      <p>Wird ein Backend-Formular automatisch abgeschickt, z.B. beim Wechsel
+        des Elementtyps, erzeugen leere Pflichtfelder keine Fehlermeldung
+        mehr.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Keine Unterbrechung des Workflow</li>
+        <li>Leere Pflichtfelder werden erst beim Speichern des Formulars
+          geprüft</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/auto-submit-mandatory.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Geschützte Artikel</h2>
+    </hgroup>
+    <article>
+      <p>Artikel können nun genau wie Seiten und Inhaltselemente geschützt
+        werden, so dass nur bestimmte Mitgliedergruppen im Frontend darauf
+        zugreifen können.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Mehrere Inhaltselemente auf einmal schützen</li>
+        <li>Teilbereiche einer Seite nur für Mitglieder freigeben</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/protected-articles.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Sprachen und Dialekte</h2>
+    </hgroup>
+    <article>
+      <p>Contao 3.1 unterstützt Sprachdialekte wie z.B. <code>de-CH</code>.
+        Diese können in den Einstellungen einer Website-Startseite oder als
+        Gebietsschema (dann werden sie <code>de_CH</code> geschrieben!)
+        bei der Übersetzung des Systems verwendet werden.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Getrennte Webseiten für <code>de-DE</code>, <code>de-AT</code> und
+          <code>de-CH</code> sind möglich</li>
+        <li>Verschiedene Übersetzungen für <code>pt_PT</code> und
+          <code>pt_BR</code> sind möglich</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="screens/language-dialects.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Inserttag-Flags</h2>
+    </hgroup>
+    <article>
+      <p>Die Ausgabe eines Inserttag kann mittels Flags an eine oder mehrere
+        Funktionen weitergereicht und so noch einmal verändert werden. Flags
+        werden dem Inserttag mit einer Pipe (<code>|</code>) angehängt.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Steuerung des Cache-Verhalten eines Inserttag</li>
+        <li>Modifikation oder Weiterverarbeitung der Ausgabe eines Inserttag</li>
+        <li>Eigene Flags können mittels Hook hinzugefügt werden</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="screens/insert-tag-flags.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="screens/insert-tag-flags-output.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Slider für Inhaltselemente</h2>
+    </hgroup>
+    <article>
+      <p>Auf Basis von swipe.js wurde ein Slider für Inhaltselemente zum Core
+        hinzugefügt. Der Slider unterstützt Wischgesten auf mobilen Endgeräten
+        und lässt sich im Backend mittels Wrapper-Elementen konfigurieren.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Unterstützt Desktop und Mobile</li>
+        <li>Funktioniert für Inhaltselemente "out of the box"</li>
+        <li>Einfach einzurichten und zu konfigurieren</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/slider.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Überarbeitete Fehlerseiten</h2>
+    </hgroup>
+    <article>
+      <p>Alle Fehlerseiten, die bislang als gelber Kasten ausgegeben wurden,
+        wurden an das Contao-Design angepasst und können jetzt auch übersetzt
+        werden. Die beinhaltet folgende Meldungen:</p>
+      <ul>
+        <li>Allgemeiner Fehler</li>
+        <li>Ungültiger Request-Token</li>
+        <li>Unvollständige Installation (neu)</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="screens/error-general.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="screens/error-token.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="screens/error-incomplete.jpg" width="1024" height="768" alt="">
+  </slide>
+
+  <!--  ########## MODELS IN CONTAO 3 ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Models in Contao 3</h2>
+      <h3>Was steckt dahinter und warum sollte man sie nutzen</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Models</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Models dienen der Speicherung von Daten</li>
+        <li>Laden und Speichern erfolgt über eine einheitliche API</li>
+        <li>Die Applikation muss nicht wissen, wo und wie die Daten gespeichert
+          werden (z.B. in Dateien oder einer Datenbank)</li>
+        <li>Zwischen Models können Beziehungen definiert werden</li>
+        <li>In Beziehung stehende Daten können direkt mitgeladen werden</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ein Beispiel</h2>
+    </hgroup>
+    <article>
+      <p>Ein neuer Datensatz wird angelegt:</p>
+      <pre class="prettyprint" data-lang="php">
+  $author = new AuthorModel();
+
+  $author->name    = 'Leo Feyer';
+  $author->company = 'iNet Robots';
+
+  $author->save();
+
+  echo $author->id; // ID des neuen Datensatzes
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ein Beispiel</h2>
+    </hgroup>
+    <article>
+      <p>Ein Datensatz wird abgerufen:</p>
+      <pre class="prettyprint" data-lang="php">
+  $author = AuthorModel::findByName('Leo Feyer');
+
+  echo $author->company; // Name der Firma
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ein Beispiel</h2>
+    </hgroup>
+    <article>
+      <p>Anlegen mit der Datenbank-Klasse:</p>
+      <pre class="prettyprint" data-lang="php">
+  $set = array();
+
+  $set['name']    = 'Leo Feyer';
+  $set['company'] = 'iNet Robots';
+
+  $stmt = $this->Database->prepare("INSERT INTO tl_author %s")
+                         ->set($set)
+                         ->execute();
+
+  echo $stmt->insertId; // ID des neuen Datensatzes
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ein Beispiel</h2>
+    </hgroup>
+    <article>
+      <p>Abrufen mit der Datenbank-Klasse:</p>
+      <pre class="prettyprint" data-lang="php">
+  $author = $this->Database->prepare("SELECT * FROM tl_author WHERE name=?")
+                           ->execute('Leo Feyer');
+
+  echo $author->company; // Name der Firma
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Erste Erkenntnisse</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Beim Arbeiten mit der Datenbank-Klasse
+          <ul>
+            <li>muss mehr Code geschrieben werden</li>
+            <li>muss der Name der Tabelle bekannt sein</li>
+          </ul>
+        </li>
+        <li>Zudem bindet man sich an ein Storage-System:
+          <ul>
+            <li>Wenn die Daten statt in der Datenbank in XML-Dateien gespeichert
+              werden sollen, müssen alle Code-Stellen angepasst werden</li>
+            <li>Werden hingegen Models verwendet, muss lediglich die
+              Model-Implementierung angepasst bzw. ausgetauscht werden</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ein umfangreicheres Beispiel</h2>
+    </hgroup>
+    <article>
+      <p>Zu einem Artikel sollen die Daten der beinhaltenden Seite sowie des
+        Autors ausgegeben werden. Es müssen also drei Datensätze aus drei
+        verschiedenen Tabellen geladen werden.</p>
+      <ul>
+        <li>Möglichkeit 1: drei Datenbank-Abfragen</li>
+        <li>Möglichkeit 2: eine Datenbank-Abfrage mittels JOIN</li>
+        <li>Möglichkeit 3: Verwendung der Models</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Möglichkeit 1</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+  // Artikeldaten
+  $article = $this->Database->prepare("SELECT * FROM tl_article WHERE id=?")
+                            ->execute(5);
+
+  // Seitendaten
+  $page =    $this->Database->prepare("SELECT * FROM tl_page WHERE id=?")
+                            ->execute($article->pid);
+
+  // Autordaten
+  $author =  $this->Database->prepare("SELECT * FROM tl_user WHERE id=?")
+                            ->execute($article->author);
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Nachteile der Möglichkeit 1</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Die Namen aller Tabellen müssen bekannt sein</li>
+        <li>Es müssen drei Datenbank-Abfragen getätigt werden</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Möglichkeit 2</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+  // Alles in einer Abfrage
+  $data = $this->Database->prepare("
+            SELECT * FROM tl_article a
+              LEFT JOIN tl_page p ON a.pid=p.id
+              LEFT JOIN tl_user u ON a.author=u.id
+            WHERE a.id=?
+          ")->execute(5);
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Nachteile der Möglichkeit 2</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Das Ergebnis enthält nur ein Feld <code>id</code>, <code>pid</code>,
+          <code>tstamp</code>, <code>title</code> …</li>
+        <li>Keine Unterscheidung <code>tl_user.id</code> oder
+          <code>tl_page.id</code> möglich</li>
+        <li>Die Namen aller Tabellen müssen bekannt sein</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Möglichkeit 3</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+  // Artikeldaten
+  $article = ArticleModel::findByPk(5);
+
+  // Seitendaten
+  $page    = $article->getRelated('pid');
+
+  // Autordaten
+  $author  = $article->getRelated('author');
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Vorteile der Möglichkeit 3</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Deutlich weniger Code</li>
+        <li>Keine Kenntnis der Tabellennamen notwendig</li>
+        <li>Die Methode <code>getRelated()</code> lädt in Beziehung stehende
+          Models</li>
+        <li>Einige Beziehungen werden automatisch per JOIN verknüpft und mit der
+          initialen DB-Abfrage geladen
+          <ul>
+            <li>Der Autordatensatz wurde vorgeladen ("eager")</li>
+            <li>Der Seitendatensatz wurde erst bei Verwendung geladen ("lazy")</li>
+            <li>Die Art der Beziehung wird im DCA definiert</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Hilfreiche Abfragen</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+  // Eine Seite anhand ihrer ID oder ihres Alias finden
+  $page = PageModel::findByIdOrAlias('contact');
+
+  // Eine Seite mit ihren vererbten Eigenschaften laden
+  $page = PageModel::findWithDetails(3);
+
+  // Die erste reguläre Seite unterhalb einer Seite finden
+  $page = PageModel::findFirstPublishedRegularByPid(2);
+
+  // Alle veröffentlichten Inhaltselemente eines Artikels laden
+  $elements = ContentModel::findPublishedByPidAndTable(7, 'tl_article');
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Was gefällt euch besser?</h2>
+    </hgroup>
+    <article>
+      <p>Beide nachfolgenden Code-Schnipsel machen exakt dasselbe.</p>
+      <pre class="prettyprint" data-lang="php">
+  // Model
+  $page = PageModel::findFirstPublishedRegularByPid(2);
+</pre>
+      <pre class="prettyprint" data-lang="php">
+  // Datenbank-Abfrage
+  $query = "SELECT * FROM tl_page WHERE pid=? AND type='regular'";
+
+  if (!BE_USER_LOGGED_IN)
+  {
+    $query .= " AND published=1
+                AND (start='' OR start<" . time() . ")
+                AND (stop='' OR stop>" . time() . ")";
+  }
+
+  $page = $this->Database->prepare($query)->execute(2);
+</pre>
+    </article>
+  </slide>
+
+  <!--  ########## CONTAO RELOADED ##########  -->
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Blick in die Zukunft</p>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao reloaded</h2>
+      <h3>Umstellung des zugrundeliegenden PHP-Framework</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Die Arbeitsgruppe</h2>
+    </hgroup>
+    <article>
+      <div class="gallery">
+        <figure>
+          <img src="people/andreas-schempp.jpg" width="120" height="120" alt="">
+          <figcaption>Andreas Schempp</figcaption>
+        </figure>
+        <figure>
+          <img src="people/christoph-wiechert.jpg" width="120" height="120" alt="">
+          <figcaption>Christoph Wiechert</figcaption>
+        </figure>
+        <figure>
+          <img src="people/flavian-sierk.jpg" width="120" height="120" alt="">
+          <figcaption>Flavian Sierk</figcaption>
+        </figure>
+        <figure>
+          <img src="people/leo-feyer.jpg" width="120" height="120" alt="">
+          <figcaption>Leo Feyer</figcaption>
+        </figure>
+        <figure>
+          <img src="people/tristan-lins.jpg" width="120" height="120" alt="">
+          <figcaption>Tristan Lins</figcaption>
+        </figure>
+        <figure>
+          <img src="people/yanick-witschi.jpg" width="120" height="120" alt="">
+          <figcaption>Yanick Witschi</figcaption>
+        </figure>
+      </div>
+      <p>Die Arbeitsgruppe hat sich in der Zeit von Februar bis Mai 2013 in
+        regelmäßigen Skype-Konferenzen mit der Frage nach einem möglichen
+        Wechsel des zugrundeliegenden PHP-Frameworks beschäftigt.</p>
+      <p>Dabei ging es nicht nur um die Entscheidung dafür oder dagegen, sondern
+        auch um den grundsätzlichen Aufbau der Applikation sowie die
+        Implementierung der Kernfunktionen.</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Die Berater</h2>
+    </hgroup>
+    <article>
+      <div class="gallery">
+        <figure>
+          <img src="people/dominik-zogg.jpg" width="120" height="120" alt="">
+          <figcaption>Dominik Zogg</figcaption>
+        </figure>
+        <figure>
+          <img src="people/lukas-kahwe-smith.jpg" width="120" height="120" alt="">
+          <figcaption>Lukas Kahwe Smith</figcaption>
+        </figure>
+        <figure>
+          <img src="people/stefan-lindecke.jpg" width="120" height="120" alt="">
+          <figcaption>Stefan Lindecke</figcaption>
+        </figure>
+      </div>
+      <p>Zu verschiedenen Spezialthemen, wie z.B. dynamische Doctrine-Entities
+        oder PHPCR, haben wir externe Berater hinzugezogen, die bereits
+        entsprechende Erfahrungen gemacht haben und teilweise direkt in den
+        Entwicklungsprozess eingebunden sind.</p>
+      <p>Sowohl die Mitglieder der Arbeitsgruppe als auch die Berater haben
+        ihr Wissen und ihre Zeit ohne Gegenleistung zur Verfügung gestellt.
+        Dafür an dieser Stelle noch einmal ein großes Dankeschön!</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Symfony PHP-Framework</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>International bekannt</li>
+        <li>Aktive und nachhaltige Entwicklung</li>
+        <li>Sehr große Community</li>
+        <li>Baut auf den vorhandenen Standards auf</li>
+        <li>Getestete Code-Basis (Unit-Tests)</li>
+        <li>Sehr umfangreiches Angebot an Bundles</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Aufgabe der Arbeitsgruppe</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Grundsätzliche Eignung
+          <ul>
+            <li>Erweiterbarkeit</li>
+            <li>Framework für ein Framework</li>
+          </ul>
+        </li>
+        <li>Umsetzung der Kernfunktionalität
+          <ul>
+            <li>Diskussion möglicher Implementierungen</li>
+            <li>Prüfung der Umsetzung mit Symfony</li>
+            <li>Prüfung eventuell benötigter Drittkomponenten</li>
+            <li>Entscheidung für eine Implementierung</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ergebnis der Arbeitsgruppe</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Die Umstellung ist grundsätzlich möglich</li>
+        <li>Alle Implementierungsfragen konnten geklärt werden</li>
+        <li>Contao würde von einer Umstellung profitieren</li>
+      </ul>
+      <p>Zum jetzigen Zeitpunkt ist jedoch nicht klar, ob wir genug Zeit und
+        Manpower haben, um die Umstellung durchzuführen. Der Fokus liegt
+        weiterhin auf der Entwicklung von Contao 3, daher haben die damit
+        verbundenen Aufgaben Priorität vor der Arbeit an Contao reloaded.</p>
+      <p>Sollten wir feststellen, dass sich das Projekt nicht in einem
+        vertretbaren Zeitrahmen neben der Entwicklung von Contao 3 realisieren
+        lässt, werden wir das Vorhaben wieder aufgeben.</p>
+    </article>
+  </slide>
+
+  <!--  ########## ENDE ##########  -->
+
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <p>Vielen Dank für die Aufmerksamkeit</p>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+  var slides = document.getElementsByTagName('slide');
+
+  window.addEventListener('slideenter', function(e) {
+    var idx = parseInt(e.slideNumber) - 1,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.played.length) video.currentTime = 0;
+    video.play();
+  });
+
+  window.addEventListener('keypress', function(e) {
+    if (e.keyCode != 112) return;
+    var idx = parseInt(document.location.hash.substr(1)) - 1 || 0,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.ended) video.currentTime = 0;
+    video.paused ? video.play() : video.pause();
+  });
+</script>
+
+</body>
+</html>

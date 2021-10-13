@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank">
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h1 data-config-title></h1>
+      <h2 data-config-subtitle></h2>
+      <p data-config-presenter></p>
+    </hgroup>
+  </slide>
+
+  <!--  ########## EINLEITUNG ##########  -->
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Bevor es richtig losgeht</p>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Installation</h2>
+      <h3>Contao herunterladen und installieren</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao installieren</h2>
+    </hgroup>
+    <article>
+      <h3>Varianten</h3>
+      <ul>
+        <li>Download-Seite auf contao.org</li>
+        <li>Installation mittels Contao-Check</li>
+        <li>Installation auf der Kommandozeile</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao installieren</h2>
+    </hgroup>
+    <article>
+      <h3>Versionsangabe</h3>
+      <pre class="prettyprint" data-lang="bash">
+  // Aktuelle Stable als .tar.gz
+  https://download.contao.org
+
+  // Aktuelle Stable als .zip
+  https://download.contao.org/zip
+
+  // Bestimmte Version als .zip
+  https://download.contao.org/3.3.RC2/zip
+
+  // Download und Installation in einem Schritt
+  curl -L https://download.contao.org/3.2.9 | tar -xzp
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao installieren</h2>
+    </hgroup>
+    <article>
+      <h3>Neue Resourcen</h3>
+      <ul>
+        <li><code>build.xml</code></li>
+        <li><code>composer.json</code></li>
+        <li><code>composer.lock</code></li>
+        <li><code>vendor</code>-Verzeichnis</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/new-resources.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/installing-from-git.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/github-release.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao-Kochbuch</h2>
+      <h3>Hackathon auf dem Contao-Camp 2013</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao-Kochbuch</h2>
+    </hgroup>
+    <article>
+      <p>Das Contao-Kochbuch ist als Ergänzung zum Contao-Handbuch gedacht und
+        dokumentiert häufige Anwendungsfälle aus der Praxis.</p>
+      <h3>Hintergrund</h3>
+      <ul>
+        <li>Geschrieben von Benutzern für Benutzer</li>
+        <li>Ergebnis des Hackathons auf dem Contao-Camp 2013</li>
+        <li>Jeder kann mitarbeiten und ist dazu auch herzlich eingeladen</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/contao-kochbuch.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>2014</h2>
+      <h3>Das Jahr der Sicherheitslücken</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao</h2>
+    </hgroup>
+    <article>
+      <p>Im Februar und April 2014 wurden zwei schwere Sicherheitslücken in
+        Contao entdeckt, die das Ausführen von beliebigem Code auf dem Server
+        ermöglicht haben (Arbitrary Code Execution).</p>
+      <h3>Hintergrund</h3>
+      <ul>
+        <li>PHP-Object-Injection</li>
+        <li><code>system/config/pathconfig.php</code></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Andere</h2>
+    </hgroup>
+    <article>
+      <p>Auch bei anderen Projekten wurden in diesem Jahr teilweise erhebliche
+        Sicherheitslücken gefunden:</p>
+      <h3>Unter anderem</h3>
+      <ul>
+        <li>Wordpress</li>
+        <li>Apple <code>goto fail;</code></li>
+        <li>Heartbleed</li>
+      </ul>
+    </article>
+  </slide>
+
+  <!--  ########## CONTAO 3.3 ##########  -->
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Blick auf die nächste Contao-Version</p>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao 3.3</h2>
+      <h3>Termin für das finale Release ist Mai 2014</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Layout-Builder</h2>
+    </hgroup>
+    <article>
+      <p>Der Layout-Builder erstellt in Contao 3 standardmäßig ein responsives
+        Layout, das in der Datei <code>layout.css</code> definiert wird.</p>
+      <h3>Neue Aufteilung</h3>
+      <ul>
+        <li><code>layout.css</code> erstellt ein statisches Layout</li>
+        <li><code>responsive.css</code> macht das Layout optional responsiv</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/responsive-style-sheet.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Standard-Templates überschreiben</h2>
+    </hgroup>
+    <article>
+      <p>Alle Templates, die bisher fest mit einem Element verbunden waren,
+        können nun bei Bedarf überschrieben werden.</p>
+      <h3>Verfügbar für</h3>
+      <ul>
+        <li>Artikel ("mod_article")</li>
+        <li>Inhaltselemente ("ce_")</li>
+        <li>Frontend-Module ("mod_")</li>
+        <li>Formularfelder ("form_")</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/template-overwrite.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Template-Vererbung</h2>
+    </hgroup>
+    <article>
+      <p>Template-Vererbung bietet die Möglichkeit, bestimmte Teilbereiche eines
+        Templates zu überschreiben, anstatt das Template komplett zu ersetzen.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Wiederkehrendes Markup kann zental verwaltet werden</li>
+        <li>Templates wie z. B. "fe_page" müssen nicht mehr komplett ersetzt
+          werden, wodurch der Wartungsaufwand beim Update sinkt</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/template-inheritance.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Template-Vererbung</h2>
+    </hgroup>
+    <article>
+      <h3>Kontrollstrukturen</h3>
+      <ul>
+        <li><code>$this->extend()</code> legt fest, welches Template beerbt wird</li>
+        <li><code>$this->block('name')</code> markiert den Anfang des Blocks</li>
+        <li><code>$this->parent()</code> fügt die Ausgabe des Originalblocks ein</li>
+        <li><code>$this->endblock()</code> markiert das Ende des Blocks</li>
+      </ul>
+      <p>Blöcke erlauben das Überschreiben von HTML-Markup. Sie werden nicht
+        benötigt, um den Inhalt von PHP-Variablen anzupassen.</p>
+      <p>Blöcke können bei Bedarf ineinander verschachtelt werden.</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Template-Vererbung</h2>
+    </hgroup>
+    <article>
+      <h3>Weiteres Beispiel</h3>
+      <pre class="prettyprint" data-lang="php">
+  &lt;?php $this->extend('fe_page'); ?&gt;
+
+  &lt;!-- Meta-Tag hinzufügen --&gt;
+  &lt;?php $this->block('meta'); ?&gt;
+    &lt;?php $this->parent(); ?&gt;
+    &lt;meta name="author" content="Leo Feyer">
+  &lt;?php $this->endblock(); ?&gt;
+
+  &lt;!-- Linke Spalte leeren --&gt;
+  &lt;?php $this->left = ''; ?&gt;
+
+  &lt;!-- Zeichensatz der Seite ändern --&gt;
+  &lt;?php $this->charset = 'ISO-8859-1'; ?&gt;
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Überarbeitung der Formular-Templates</h2>
+    </hgroup>
+    <article>
+      <h3>Ziele</h3>
+      <ul>
+        <li>Verschieben des HTML-Markups der Formularfelder aus den
+          Widget-Klassen in die Template-Dateien</li>
+        <li>Erstellung eines eigenen Templates für jedes Formularfeld</li>
+        <li>Vererbung des umschließenden Markups (<code>&lt;tr&gt;&lt;td&gt;</code>
+          bzw. <code>&lt;div&gt;</code>)</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Überarbeitung der Formular-Templates</h2>
+    </hgroup>
+    <article>
+      <h3>Bisheriges Template</h3>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php if (!$this->tableless): ?&gt;
+  &lt;tr class="&lt;?php echo $this->rowClass; ?&gt;"&gt;
+    &lt;td class="col_0 col_first">&lt;?php echo $this->generateLabel(); ?&gt;&lt;/td&gt;
+    &lt;td class="col_1 col_last">&lt;?php echo $this->generateWithError(); ?&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;?php else: ?&gt;
+  &lt;?php echo $this->generateLabel(); ?&gt;
+  &lt;?php echo $this->generateWithError(); ?&gt;&lt;br&gt;
+&lt;?php endif; ?>
+</pre>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/form-row.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/form-textfield.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Template-Marker</h2>
+    </hgroup>
+    <article>
+      <p>Im Debugmodus wird der Anfang und das Ende jedes Templates mit einem
+        unsichtbaren Kommentar im Quelltext der Webseite markiert.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Es lässt sich erkennen wo welches Markup generiert wird</li>
+        <li>Es lässt sich erkennen aus welcher Quelle ein Template stammt</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/template-markers.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>SCSS- und LESS-Unterstützung</h2>
+    </hgroup>
+    <article>
+      <p>Im Seitenlayout eingebundene externe Stylesheets können nun auch vom
+        Typ <code>.scss</code> oder <code>.less</code> sein.</p>
+      <h3>Funktionsweise</h3>
+      <ul>
+        <li>Der Combiner verarbeitet <code>.scss</code>- und <code>.less</code>-Dateien</li>
+        <li>Der Code wird automatisch in normales CSS umgewandelt</li>
+        <li>Einbindung weiterer Dateien mittels <code>@import</code> möglich</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/scss-less.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>SCSS- und LESS-Unterstützung</h2>
+    </hgroup>
+    <article>
+      <h3>Integration von Compass</h3>
+      <ul>
+        <li>Kopieren der <code>.scss</code>-Dateien in den Theme-Ordner</li>
+        <li>Einbindung über die <code>@import</code>-Anweisung</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/scss-compass.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Datei-Versionierung</h2>
+    </hgroup>
+    <article>
+      <p>Editierbare Dateien werden ab sofort vollständig versioniert, d. h.
+        nicht nur die Metadaten sondern auch der Dateiinhalt.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Nachvollziehbare Änderungshistorier</li>
+        <li>Kollaboratives Arbeiten an z. B. SCSS-Dateien</li>
+        <li>Wiederherstellen eines früheren Stands</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/file-content-versioning.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Debugmodus</h2>
+    </hgroup>
+    <article>
+      <h3>Verbesserungen</h3>
+      <ul>
+        <li>Anzeige im Frontend nur bei angemeldetem Backend-Benutzer</li>
+        <li>Stylesheets werden nicht mehr zusammengefasst</li>
+        <li>Besseres Zusammenspiel mit z. B. den Chrome-DevTools</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/debug-assets-uncombined.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Eigene Layoutbereiche</h2>
+    </hgroup>
+    <article>
+      <h3>Verbesserungen</h3>
+      <ul>
+        <li>Aufruf im Template über <code>$this->sections()</code></li>
+        <li>Das Markup wurde in Template-Dateien ausgelagert</li>
+        <li>Einfachere Anpassung der Ausgabe möglich</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/custom-sections-template.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Flexibles Backend-Theme</h2>
+    </hgroup>
+    <article>
+      <blockquote>Das Backend lässt sich nicht so eben mal responsiv machen.</blockquote>
+      <p>Diese Aussage ist korrekt, denn "responsiv" beinhaltet mehr als nur
+        die Anpassung an unterschiedliche Bildschirmgrößen. Es müssten z. B.
+        auch gerätespezifischen Bedienkonzepte berücksichtigt werden.</p>
+      <p>Daher heißt das Theme auch nicht "responsive" sondern "flexible".</p>
+      <p>Die flexible Anpassung an verschiedene Endgeräte macht das Backend
+        zwar nicht vollständig responsiv, aber sehr wohl bedienbar.</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/flexible-theme.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Pfade im Dateiwähler</h2>
+    </hgroup>
+    <article>
+      <p>Die Pfade der sortierbaren Dateien z. B. im Downloads-Element werden
+        nun verkürzt dargestellt, um die Übersichtlichkeit zu erhöhen.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Einfacheres Sortieren möglich</li>
+        <li>Details werden beim Mouseover angezeigt</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/file-picker-short-paths.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Backend-Seitenwähler</h2>
+    </hgroup>
+    <article>
+      <p>Alternativ zum "Anzeigen"-Dropdown-Menü steht im Backend jetzt auch ein
+        Seitenwähler zur Verfügung.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Schnellerer Seitenwechsel</li>
+        <li>Alternatives Bedienkonzept</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/listing-pagination.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>TinyMCE 4</h2>
+    </hgroup>
+    <article>
+      <p>Der Rich-Text-Editor "TinyMCE" hat ein Major-Update auf die aktuelle
+        Version 4 erhalten.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Übersichtlicheres Benutzerinterface</li>
+        <li>Kleinere Distribution mit entschlacktem Quellcode</li>
+        <li>Verbesserungen hinsichtlich Barrierefreiheit</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/tinymce4.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Bilder in TinyMCE</h2>
+    </hgroup>
+    <article>
+      <p>Bildpfade in TinyMCE werden automatisch mit dem "file"-Inserttag
+        ersetzt, das die entsprechende UUID enthält.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Verknüpfung bleibt beim Verschieben der Datei erhalten</li>
+        <li>Der Redakteur muss sich nicht mit UUIDs und Inserttags beschäftigen</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/tinymce-file-insert-tag.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Drag'n'Drop-Uploader</h2>
+    </hgroup>
+    <article>
+      <p>Ein neuer, alternativer Datei-Uploader erlaubt das Hochladen von
+        Dateien in der Dateiverwaltung mittels Ziehen und Ablegen.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Datei-Upload per Klick oder per Drag'n'Drop</li>
+        <li>Fallback auf das Standard-Inputfeld, wenn JavaScript nicht verfügbar
+          ist</li>
+        <li>Auswahl des Datei-Uploaders in den Benutzereinstellungen</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/drag-n-drop-upload.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Vorschau als Mitglied</h2>
+    </hgroup>
+    <article>
+      <p>Analog zur Funktion "Benutzerwechsel" im Backend lässt sich die
+        Frontend-Vorschau nun direkt als ein bestimmtes Mitglied aufrufen.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Beschleunigter Workflow</li>
+        <li>Login ohne Kenntnis des Benutzernamens</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/preview-with-member.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Vorschau einer Seite</h2>
+    </hgroup>
+    <article>
+      <p>Die in der Frontend-Vorschau gewählte Seite kann nun optional über den
+        "url"-Parameter geändert werden.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Wechsel der voreingestellten URL</li>
+        <li>Beim Neuladen mittels F5 bleibt die Seite erhalten</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/frontend-preview-url.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Inhaltselement "Markdown"</h2>
+    </hgroup>
+    <article>
+      <p>Ein neues Inhaltselement erlaubt das Schreiben von Markdown, welches
+        bei der Ausgabe im Frontend in HTML-Code umgewandelt wird.</p>
+      <h3>Erweiterte Syntax</h3>
+      <ul>
+        <li>Inline HTML</li>
+        <li>Tabellen</li>
+        <li>Definitionslisten</li>
+        <li>Fußnoten</li>
+        <li>Siehe <a href="http://michelf.ca/projects/php-markdown/extra/" target="_blank">michelf.ca/projects/php-markdown/extra/</a></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/markdown-element.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Verbesserungen für Entwickler</h2>
+    </hgroup>
+    <article>
+      <p>Zwei neue Kommandozeilen-Skripte erlauben die Ausführung der
+        Wartungsjobs sowie der Dateisynchronisation auf der Kommandozeile.</p>
+      <h3>Vorteile</h3>
+      <ul>
+        <li>Nutzung bei der Arbeit auf der Kommandozeile</li>
+        <li>Einfache Einbindung in eigene Skripte oder Cronjobs</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/command-line-scripts.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Composer</h2>
+    </hgroup>
+    <article>
+      <p>Womit bei Contao die alternative Erweiterungsverwaltung auf Basis von
+        Composer gemeint ist, die momentan in der Beta-Testphase steckt.</p>
+      <h3>Aktueller Stand</h3>
+      <ul>
+        <li>Kernfunktionen laufen stabil</li>
+        <li>GUI und Ökosystem müssen noch ausgebaut werden</li>
+        <li>Für die Weiterentwicklung werden Tester und Feedback benötigt</li>
+        <li>Integration ins Contao-Installtool sowie in den Contao-Check</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/contao-check.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Installation</h2>
+    </hgroup>
+    <article>
+      <p>Die Installation des Composer-Clients erfolgt über das Extension
+        Repository. Dort steht aktuell die Version 0.9.0 zur Verfügung.</p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/composer-migration.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Wie geht es weiter?</p>
+    </article>
+  </slide>
+
+  <!--  ########## ZUKUNFT ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao reloaded</h2>
+      <h3>Umstellung des zugrundeliegenden PHP-Framework</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Aktueller Stand</h2>
+    </hgroup>
+    <article>
+      <blockquote>Wir wollen versuchen, Contao auf Symfony umzustellen. Es ist
+        jedoch nicht klar, ob wir genug Zeit und Manpower dafür haben.</blockquote>
+      <p>Hinzu kommt, dass bei einem kompletten Neuanfang auch das ganze
+        Ökosystem angepasst werden muss.</p>
+      <h3>Unter anderem</h3>
+      <ul>
+        <li>müssten alle Erweiterungen neu gemacht werden</li>
+        <li>müssten alle Übersetzungen neu gemacht werden</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Planänderung</h2>
+    </hgroup>
+    <article>
+      <p>Es wird kein Neuanfang mit hartem Schnitt geben.</p>
+      <p>Um trotzdem nicht auf die Vorteile von Symfony verzichten zu müssen,
+        werden wir Symfony systemnah in Contao integrieren und nach und nach
+        das Contao-Framework auf die Symfony-Komponenten umstellen.</p>
+      <h3>Proof-of-Concept</h3>
+      <p>Ein erster Entwurf dieser Variante ist bereits im Zweig
+        <a href="https://github.com/contao/core/tree/feature/contao-with-symfony">feature/contao-with-symfony</a>
+        auf GitHub zu sehen.</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Nächste Schritte</h2>
+    </hgroup>
+    <article>
+      <p>In einem öffentlichen Call am 24. April haben wir uns auf folgende
+        nächste Schritte geeinigt:</p>
+      <ul>
+        <li>Trennung der Ressourcen soweit möglich</li>
+        <li>Nutzung der Symfony-Komponenten im Contao-Framework</li>
+        <li>Frühe und umfassende Integration des Dependency-Injection-Containers</li>
+        <li>Nutzung des Event-Dispatchers für Contao-Hooks</li>
+        <li>Entwicklung eines Bundle-Autoloaders für Symfony-Bundles</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Release-Plan</h2>
+    </hgroup>
+    <article>
+      <p>Contao mit Symfony wird voraussichtlich im Mai 2015 als Contao 4
+        veröffentlicht, zusammen mit der LTS-Version Contao 3.5.</p>
+      <h3>Hintergrund</h3>
+      <ul>
+        <li>2 Jahre Parallelbetrieb von Contao 3 und Contao 4</li>
+        <li>Eventuelle Rückwärts-Inkompatibilitäten entstehen dabei nicht durch
+          die Symfony-Integration, sondern z. B. durch den
+          <ul>
+            <li>Wegfall des Safe-Mode-Hacks</li>
+            <li>Wegfall der XHTML-Unterstützung</li>
+            <li>Wegfall des Contao-Autoloaders</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Allerdings</h2>
+    </hgroup>
+    <article>
+      <p>Wir wollen zunächst sehen, ob und wie sich unser Vorhaben
+        implementieren lässt und ob diese Implementierung dann auch für die
+        Mehrheit der Entwickler sinnvoll nutzbar ist.</p>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>contao.org</h2>
+      <h3>Relaunch der Contao-Projektwebseite</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Website-Relaunch</h2>
+    </hgroup>
+    <article>
+      <p>Der Relaunch der Projektwebseite contao.org wird in Zusammenarbeit mit
+        einer Contao-Partneragentur durchgeführt.</p>
+      <h3>Aktueller Stand</h3>
+      <ul>
+        <li>Planung und Konzeption im Dezember 2013</li>
+        <li>Besprechung der Wireframes im April 2014</li>
+        <li>Vorstellung des Designentwurfs im Mai 2014</li>
+        <li>Geplante Umsetzung der Hauptbereiche (Startseite, About, Download,
+          Support etc.) bis Ende 2014</li>
+        <li>Dokumentation und Erweiterungen werden separat umgestellt</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <video src="videos/website-relaunch.mp4" width="1024" height="768" preload="none"></video>
+  </slide>
+
+  <!--  ########## ENDE ##########  -->
+
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <p>Vielen Dank für die Aufmerksamkeit</p>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+  var slides = document.getElementsByTagName('slide');
+
+  window.addEventListener('slideenter', function(e) {
+    var idx = parseInt(e.slideNumber) - 1,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.played.length) video.currentTime = 0;
+    video.play();
+  });
+
+  window.addEventListener('keypress', function(e) {
+    if (e.keyCode != 112) return;
+    var idx = parseInt(document.location.hash.substr(1)) - 1 || 0,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.ended) video.currentTime = 0;
+    video.paused ? video.play() : video.pause();
+  });
+</script>
+
+</body>
+</html>

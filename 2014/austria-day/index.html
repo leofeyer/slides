@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank">
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h1 data-config-title></h1>
+      <h2 data-config-subtitle></h2>
+      <p data-config-presenter></p>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Über mich</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>37 Jahre alt</li>
+        <li>Software-Entwickler und Server-Administrator</li>
+        <li>iNet Robots Ltd. & Co. KG
+          <ul>
+            <li><a href="https://inetrobots.de">Contao-Webhosting</a></li>
+            <li><a href="https://www.inetrobots.com/shop/product_info.php?info=p12_Contao-Live-Update-ID.html">Live-Update-Service</a></li>
+            <li><a href="https://themes.contao.org">Contao-Theme-Store</a></li>
+          </ul>
+        </li>
+        <li>Im Netz unterwegs
+          <ul>
+            <li>Forum: <a href="https://community.contao.org/de/member.php?9-leo">leo</a></li>
+            <li>Twitter: <a href="https://twitter.com/leofeyer">@leofeyer</a></li>
+            <li>GitHub: <a href="https://github.com/leofeyer">leofeyer</a></li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <!--  ########## ZAHLEN ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao in Zahlen</h2>
+      <h3>Aktuelle Kennziffern rund um Contao</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Downloads</h2>
+    </hgroup>
+    <article>
+      <p>Am 21. Juli 2014 war Contao 943.789 Mal heruntergeladen worden.</p>
+      <h3>Woher kommt die Zahl?</h3>
+      <ul>
+        <li>831.017 Downloads von sourceforge.net bis zum 30. August 2013</li>
+        <li>Seitdem Zählen der Aufrufe der URL <a href="https://download.contao.org">download.contao.org</a>
+          <ul>
+            <li>Contao-Check-Installer</li>
+            <li>Download-Button auf contao.org</li>
+          </ul>
+        </li>
+        <li>Downloads direkt von GitHub können nicht erfasst werden</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Webseiten</h2>
+    </hgroup>
+    <article>
+      <p>Aktuell gibt es knapp 70.000 Webseiten, die mit Contao laufen.</p>
+      <h3>Woher kommt die Zahl?</h3>
+      <ul>
+        <li>Die Webseite <a href="http://www.cmscrawler.com/tool/Contao_Open_Source_CMS">CMSCrawler</a>
+          hatte am 21. Juli 2014 weltweit 67.482 Contao-Installationen registriert</li>
+        <li>Laut Log-Datei des Live-Update-Servers ist diese Zahl realistisch</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Marktanteil</h2>
+    </hgroup>
+    <article>
+      <p>Contao liegt bei <a href="http://www.cmscrawler.com/">CMSCrawler</a> auf
+        Platz 16 von 837 Systemen.</p>
+      <h3>Marktanteile</h3>
+      <ul>
+        <li>In Deutschland liegt Contao auf Platz 8 (2,78% Marktanteil)</li>
+        <li>In Österreich liegt Contao auf Platz 6 (3,30% Marktanteil)</li>
+        <li>In der Schweiz liegt Contao auf Platz 8 (2,53% Marktanteil)</li>
+      </ul>
+      <h3>Fun-Fact</h3>
+      <p>Den höchsten Marktanteil hat Contao mit 4,87% in Antigua und Barbuda,
+        allerdings gibt es dort insgesamt nur 882 Contao-Webseiten.</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Beliebtheit</h2>
+    </hgroup>
+    <article>
+      <p>In der <a href="http://webkrauts.de/artikel/2014/jetzt-wissen-wir-es">Webworker-Umfrage 2014</a>
+        lag Contao mit 23% auf Platz 3 der beliebtesten Content-Management-Systeme.</p>
+      <h3>Die Top 5</h3>
+      <ul>
+        <li>62% nutzen Wordpress</li>
+        <li>27% nutzen TYPO3</li>
+        <li>23% nutzen Contao</li>
+        <li>15% nutzen Drupal</li>
+        <li>9% nutzen Joomla</li>
+      </ul>
+      <p style="font-size:.7em;margin-top:2em" class="gray2">* Hinweis: Summe größer 100%, da Mehrfachnennungen möglich waren.</p>
+    </article>
+  </slide>
+
+  <!--  ########## RÜCKBLICK ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Rückblick</h2>
+      <h3>Die Anfänge von Contao</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Content Coach</h2>
+    </hgroup>
+    <article>
+      <p>Der direkte Vorgänger von TYPOlight war ein System namens "Content Coach",
+        das von 2004 bis 2005 im Einsatz war.</p>
+      <h3>Gemeinsamkeiten</h3>
+      <ul>
+        <li>Seitenstruktur</li>
+        <li>Inhaltselemente</li>
+        <li>Templates</li>
+        <li>Backend und Frontend</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/ccoach1.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/ccoach2.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/ccoach3.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/ccoach4.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/ccoach5.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/ccoach6.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/ccoach7.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/ccoach8.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/ccoach9.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/ccoach10.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>TYPOlight 1.0</h2>
+    </hgroup>
+    <article>
+      <p>Im Jahre 2006 wurde die erste Version von TYPOlight veröffentlicht.</p>
+      <h3>Unterschiede</h3>
+      <ul>
+        <li>Kein FE-Editing mehr</li>
+        <li>Nicht nur Inhalte können bearbeitet werden</li>
+        <li>Artikel als zusätzliche Ebene</li>
+        <li>Verwendung eines externen Rich-Text-Editors</li>
+        <li>Integration der Online-Hilfe</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/typolight1.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/typolight2.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/typolight3.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/typolight4.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/typolight5.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/typolight6.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/typolight7.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/typolight8.png" width="1024" height="768" alt="">
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Meilensteine</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>2006
+          <ul>
+            <li>Projektstart</li>
+            <li>Englische Webseite mit PunBB-Forum</li>
+          </ul>
+        </li>
+        <li>2007
+          <ul>
+            <li>Erste TYPOlight-Templates entstehen</li>
+            <li>DokuWiki mit ersten deutschsprachigen Inhalten</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Meilensteine</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>2008
+          <ul>
+            <li>TRAC mit SVN</li>
+            <li>Contao-Helpdesk löst PunBB ab</li>
+            <li>Erstes User-Treffen</li>
+            <li>Logo-Wettbewerb</li>
+            <li>Erstes gedrucktes Buch erscheint</li>
+            <li>Start des Extension-Repositorys</li>
+            <li>Projektwebseite auf Deutsch verfügbar</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Meilensteine</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>2009
+          <ul>
+            <li>Das Forum wird ausgegliedert</li>
+            <li>Redmine löst TRAC und DokuWiki ab</li>
+            <li>Erstes Videotraining erscheint</li>
+          </ul>
+        </li>
+        <li>2010
+          <ul>
+            <li>TYPOlight wird zu Contao</li>
+            <li>Das Contao-Wiki geht online</li>
+          </ul>
+        </li>
+        <li>2011
+          <ul>
+            <li>Wechsel zu Git und GitHub</li>
+            <li>Long-Term-Support-Releases</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Meilensteine</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>2012
+          <ul>
+            <li>Contao 3 wird veröffentlicht</li>
+            <li>Übersetzungen auf transifex.com</li>
+            <li>Start des Contao-Theme-Store</li>
+            <li>Gründung der Contao-Association</li>
+          </ul>
+        </li>
+        <li>2013
+          <ul>
+            <li>Umzug der Dokumentation zu GitHub</li>
+            <li>Das Contao-Kochbuch geht online</li>
+            <li>Endgültiger Weggang von sourceforge.net</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <!--  ########## HEUTE ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao heute</h2>
+      <h3>Die aktuellen Contao-Versionen</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao-Versionen</h2>
+    </hgroup>
+    <article>
+      <p>Aktuell gibt es vier Contao-Versionen, die aktiv entwickelt werden.</p>
+      <h3>Aktive Versionen</h3>
+      <ul>
+        <li>Contao 3.2 (Long-Term-Support)</li>
+        <li>Contao 3.3 (current stable)</li>
+        <li>Contao 3.4 (nächste Minor-Version)</li>
+        <li>Contao 4.0 (nächste Major-Version)</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Long-Term-Support</h2>
+    </hgroup>
+    <article>
+      <p>Ein LTS-Release hat einen verlängerten Lebenszyklus:</p>
+      <ul>
+        <li>Normal
+          <ul>
+            <li>6 Monate aktiver Support</li>
+            <li>End-of-Life mit Erscheinen der nächsten Version</li>
+          </ul>
+        </li>
+        <li>Long-Term-Support
+          <ul>
+            <li>18 Monate aktiver Support</li>
+            <li>Anschließend 6 Monate Übergangsphase, in der nur noch sicherheitsrelevante
+              Fehler behoben werden</li>
+            <li>End-of-Life 6 Monate nach Erscheinen der nächsten LTS-Version</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Release-Roadmap</h2>
+    </hgroup>
+    <article>
+      <p>Die Roadmap ist zu finden unter <a href="https://contao.org/de/release-plan.html">contao.org/de/release-plan.html</a>.</p>
+      <img src="images/roadmap.png" width="904" height="430" alt="">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Nächste Termine</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>November 2014
+          <ul>
+            <li>Contao 3.4 wird veröffentlicht</li>
+            <li>Contao 3.3 erreicht sein End-of-Life</li>
+          </ul>
+        </li>
+        <li>Mai 2015
+          <ul>
+            <li>Contao 4.0 wird veröffentlicht</li>
+            <li>Contao 3.5 LTS wird veröffentlicht</li>
+            <li>Contao 3.4 erreicht sein End-of-Life</li>
+            <li>Contao 3.2 LTS geht in die Übergangsphase</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao auf GitHub</h2>
+    </hgroup>
+    <article>
+      <p>Alle aktiven Contao-Versionen werden auf GitHub gepflegt.</p>
+      <h3>contao/core</h3>
+      <ul>
+        <li>Contao 2 und Contao 3</li>
+        <li>Der <a href="https://github.com/contao/core/tree/master">master</a>-Zweig
+          enthält aktuell die Contao 3.3er-Serie</li>
+        <li>Der <a href="https://github.com/contao/core/tree/support/3.2">support/3.2</a>-Zweig
+          enthält aktuell die Contao 3.2er-Serie (LTS)</li>
+        <li>Der <a href="https://github.com/contao/core/tree/develop">develop</a>-Zweig
+          enthält aktuell die Contao 3.4er-Serie</li>
+      </ul>
+      <p>Tickets für Contao 3 gehören in den <a href="https://github.com/contao/core/issues">Issue-Tracker</a>
+        dieses Repositorys.</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao-Entwickler</h2>
+    </hgroup>
+    <article>
+      <p>Die GitHub-Mention <a href="https://github.com/orgs/contao/teams/developers">@contao/contao-developers</a>
+        benachrichtigt:</p>
+      <div class="gallery" style="margin-top:1.5em">
+        <figure>
+          <img src="people/andreas-schempp.jpg" width="120" height="120" alt="">
+          <figcaption>Andreas Schempp</figcaption>
+        </figure>
+        <figure>
+          <img src="people/christian-schiffler.jpg" width="120" height="120" alt="">
+          <figcaption>Christian Schiffler</figcaption>
+        </figure>
+        <figure>
+          <img src="people/christoph-wiechert.jpg" width="120" height="120" alt="">
+          <figcaption>Christoph Wiechert</figcaption>
+        </figure>
+        <figure>
+          <img src="people/leo-feyer.jpg" width="120" height="120" alt="">
+          <figcaption>Leo Feyer</figcaption>
+        </figure>
+      </div>
+      <div class="gallery">
+        <figure>
+          <img src="people/martin-auswoeger.jpg" width="120" height="120" alt="">
+          <figcaption>Martin Auswöger</figcaption>
+        </figure>
+        <figure>
+          <img src="people/oliver-hoff.jpg" width="120" height="120" alt="">
+          <figcaption>Oliver Hoff</figcaption>
+        </figure>
+        <figure>
+          <img src="people/tristan-lins.jpg" width="120" height="120" alt="">
+          <figcaption>Tristan Lins</figcaption>
+        </figure>
+        <figure>
+          <img src="people/yanick-witschi.jpg" width="120" height="120" alt="">
+          <figcaption>Yanick Witschi</figcaption>
+        </figure>
+      </div>
+      <p>Eine vollständige Liste aller Contributors ist ebenfalls auf GitHub verfügbar:
+        <a href="https://github.com/contao/core/graphs/contributors">github.com/contao/core/graphs/contributors</a></p>
+    </article>
+  </slide>
+
+  <slide class="fill video nobackground">
+    <img src="images/contributors.png" width="1024" height="768" alt="">
+  </slide>
+
+  <!--  ########## ZUKUNFT ##########  -->
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Contao 4</h2>
+      <h3>Die nächste Major-Version (Mai 2015)</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Contao 4</h2>
+    </hgroup>
+    <article>
+      <p>Contao 4 liegt in einem separaten Git-Repository.</p>
+      <h3>contao/contao</h3>
+      <ul>
+        <li>Nur Contao 4</li>
+        <li>Entwicklung der ersten stabilen Version im
+          <a href="https://github.com/contao/contao/tree/develop">develop</a>-Zweig</li>
+        <li>Distributions-Repository</li>
+        <li>Benötigte Komponenten werden über Composer geladen</li>
+      </ul>
+      <p>Tickets für Contao 4 gehören in den <a href="https://github.com/contao/contao/issues">Issue-Tracker</a>
+        dieses Repositorys.</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Komponenten</h2>
+    </hgroup>
+    <article>
+      <p>Jede Contao 4-Komponente hat ihr <a href="https://contao.org/de/news/neustrukturierung-der-contao-git-repositorys.html">eigenes Git-Repository</a>.</p>
+      <h3>Übersicht</h3>
+      <ul>
+        <li>contao/contao-bundle
+          <ul>
+            <li>Symfony-Integration</li>
+          </ul>
+        </li>
+        <li>contao/contao-library
+          <ul>
+            <li>Contao-Framework</li>
+            <li>ehemals <code>system/modules/core/library</code></li>
+          </ul>
+        </li>
+        <li>contao/module-*
+          <ul>
+            <li>Contao-Module (z.B. <code>system/modules/core</code>)</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Vorteile</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Komponenten können unabhängig gepflegt werden</li>
+        <li>Übergabe einzelner Komponenten an dritte Maintainer möglich</li>
+        <li>Distributions-Repository kann sehr schlank gehalten werden</li>
+        <li>Einfaches Hinzufügen externer Komponenten zur Distribution</li>
+        <li>Möglichkeit zur Zusammenstellung einer eigenen Distribution</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Symfony-Integration</h2>
+    </hgroup>
+    <article>
+      <p>Contao wird in den Programmablauf von Symfony integriert.</p>
+      <h3>Programmablauf</h3>
+      <ul>
+        <li>Aufruf der <code>index.php</code> (Entry Point)</li>
+        <li>Booten des Symfony-Kernels</li>
+        <li>Das Contao-Bundle lädt Contao (<code>initialize.php</code>)</li>
+        <li>Der Symfony-Kernel verarbeitet die Anfrage</li>
+        <li>Der Contao-Router ruft den Symfony-Controller auf (<code>routing.yml</code>)</li>
+        <li>Der Symfony-Controller ruft den Contao-Controller auf</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Vorteile</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Nutzung eigener Routen möglich</li>
+        <li>Bei Bedarf kann Contao komplett umgangen werden</li>
+        <li>Alle Symfony-Komponenten stehen zur Verfügung</li>
+        <li>Automatische Initialisierung der Datenbank- und Mailer-Komponente
+          von Symfony mit den Daten aus der Contao-Konfiguration</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Was fehlt noch?</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Integration des Dependency-Injection-Containers</li>
+        <li>Integration des Event-Dispatchers für Hooks und Callbacks</li>
+        <li>Mapping der Contao-Framework-Klassen soweit möglich</li>
+        <li>Update-sicherer Mechanismus für das Bundle-Loading</li>
+      </ul>
+    </article>
+  </slide>
+
+  <!--  ########## ENDE ##########  -->
+
+  <slide class="title-slide logoslide nobackground">
+    <article class="flexbox vcenter">
+      <p>Noch Fragen?</p>
+    </article>
+  </slide>
+
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <p>Vielen Dank für die Aufmerksamkeit</p>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+  var slides = document.getElementsByTagName('slide');
+
+  window.addEventListener('slideenter', function(e) {
+    var idx = parseInt(e.slideNumber) - 1,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.played.length) video.currentTime = 0;
+    video.play();
+  });
+
+  window.addEventListener('keypress', function(e) {
+    if (e.keyCode != 112) return;
+    var idx = parseInt(document.location.hash.substr(1)) - 1 || 0,
+        slide = slides[idx], video;
+    if (!slide) return;
+    video = slide.getElementsByTagName('video')[0];
+    if (typeof video == 'undefined') return;
+    if (video.ended) video.currentTime = 0;
+    video.paused ? video.play() : video.pause();
+  });
+</script>
+
+</body>
+</html>
