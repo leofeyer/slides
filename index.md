@@ -4,9 +4,15 @@ Here are the slides of various talks I gave:
 
 <table>
   <tr>
-    <td>2021</td>
-    <td><a href="https://leofeyer.github.io/slides/2021/agenturtag/">Agenturtag 2021</a></td>
+    <td>2023</td>
+    <td><a href="https://leofeyer.github.io/slides/2023/konferenz/">Konferenz 2023</a></td>
     <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2021</td>
+    <td></td>
+    <td><a href="https://leofeyer.github.io/slides/2021/agenturtag/">Agenturtag 2021</a></td>
     <td></td>
   </tr>
   <tr>
