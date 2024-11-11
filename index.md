@@ -4,6 +4,12 @@ Here are the slides of various talks I gave:
 
 <table>
   <tr>
+    <td>2024</td>
+    <td><a href="https://leofeyer.github.io/slides/2024/konferenz/">Konferenz 2024</a></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
     <td>2023</td>
     <td><a href="https://leofeyer.github.io/slides/2023/konferenz/">Konferenz 2023</a></td>
     <td></td>
